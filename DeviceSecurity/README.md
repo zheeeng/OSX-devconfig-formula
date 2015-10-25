@@ -25,3 +25,7 @@ Setting a firmware password in OS X prevents your Mac from starting up from any 
 8. Click the Apple menu and choose Restart or Shutdown. The next time your Mac starts up, your firmware password is active.
 
 _More details: <https://support.apple.com/en-us/HT204455>_
+
+## Remove CNNIC Certificates from Keychain
+
+Open `Keychain Access` > search `CNNIC` > delete all associate certificates
