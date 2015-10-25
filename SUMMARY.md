@@ -5,3 +5,4 @@
 	* [Finder](SystemPreferences/Finder.md)
 	* [System Preferences Panel](SystemPreferences/SystemPreferencesPanel.md)
 * [XCode](XCode/README.md)
+* [Homebrew](Homebrew/README.md)
