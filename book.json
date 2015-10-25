@@ -1,0 +1,14 @@
+{
+    "author": "Zheeeng<air.island.e@gmail.com>",
+    "description": "自用OS X 开发配置定式，亦供参考",
+    "extension": null,
+    "generator": "site",
+    "isbn": null,
+    "links": {
+        "sidebar": {
+            "About me": "https://github.com/zheeeng"
+        }
+    },
+
+    "title": "OS X 开发配置定式"
+}
