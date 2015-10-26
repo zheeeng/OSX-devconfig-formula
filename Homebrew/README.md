@@ -32,7 +32,7 @@ Homebrew installs packages (or Formula in Homebrew vocabulary) to directory `/us
 3. `Which xxx` list which `xxx` will the shell execute as usually. 
 4. Sometimes ZSH and Bash cache contents of $PATH, you'd execute `hash -r` to forget all previously remembered utility locations.
 
-## Usage
+## Common Usage
 
 Search formulae:
 
@@ -60,7 +60,7 @@ Show outdated Formulae:
 
 Upgrade Formula:
 
-	brew upgrade <FORMULA>
+	brew upgrade [--cleanup] <FORMULA>
 
 Remove older versions Formulae:
 
