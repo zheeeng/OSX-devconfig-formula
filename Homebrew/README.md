@@ -19,9 +19,9 @@ Homebrew installs packages (or Formula in Homebrew vocabulary) to directory `/us
 
 		export PATH="/usr/local/bin:$PATH"
 
-	For making config work permanently, we employ `~/bin/envconfig.sh` to hold aliases, exports, path changes etc.
+	For making config work permanently, we employ `~/scripts/envconfig.sh` to hold aliases, exports, path changes etc.
 
-		echo 'export PATH="/usr/local/bin:$PATH"' >> ~/bin/envconfig.sh
+		echo 'export PATH="/usr/local/bin:$PATH"' >> ~/scripts/envconfig.sh
 		
 	Details in `envconfig.sh Section`.
 
