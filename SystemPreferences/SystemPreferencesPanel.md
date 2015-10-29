@@ -70,6 +70,9 @@
 ## Bluetooth
 * Uncheck `Show Bluetooth in menu bar`
 
+## Sharing
+* Change Computer Name(hostname)
+
 ## Users & Groups
 * Disable Guest User
 ** If any problem happens, maybe you'd turn off FileVault & iCloud Find My Mac & restart your Mac first **
