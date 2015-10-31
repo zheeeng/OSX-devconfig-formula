@@ -15,7 +15,7 @@ Those quick look plugins are recommended:
 * QuickLookJson
 	> Preview JSON files with structure highlighting.
 * QLPrettyPatch
-	> Preview .patch files with difference highlighting.
+	> Preview .patch files with differences highlighting.
 
 ## Installation
 
