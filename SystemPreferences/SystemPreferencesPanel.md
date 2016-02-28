@@ -10,8 +10,6 @@
 * `Screen Saver` > Transition `Sliding Panels` > Start after `5 Minutes` > Source `National Geographic` && Check `Shuffle slide order` > Check `Show with clock`
 
 ## Dock
-* Adapt Size && Magnication
-* Position on screen: `Bottom`
 * Double-click a window's title bar to `zoom`
 * Check `Automatically hide and show the Dock`
 
@@ -19,12 +17,6 @@
 * Dashboard: `Off` (** Default settings after OS X 10.10 **)  
 ** For old OS X: ** in Terminal execute:
 	`defaults write com.apple.dashboard mcx-disabled -boolean YES`)
-
-## Language & Region
-* Preferred languages: `English`
-* Region: `China`
-* First day of week: `Sunday`
-* Calendar: `Gregorian` 
 
 ## Security & Privacy
 * `General` > Require password `5 minutes` after sleep or screen begins
@@ -46,7 +38,8 @@
 * Change battery to show percentage: `Menubar` > `Power status icon` > `Show Percentage`
 
 ## Keyboard
-* Some keyboard remap see Karabiner Section  
+* Change automatical spelling checking scheme to U.S. English: `Text` > Scroll down `Spelling` bar to `Set up...` > check `U.S. English` & uncheck `British English`
+* Some keyboard remapping see Karabiner Section  
 [] Todo: add Karabiner section
 * `Shortcuts` > Full Keyboard Access: In windows and dialogs, press Tab to move keyboard focus between: `All controls`  
 ** Tips: `ESC` == dialog `cancel`; `Command` + `Delete` == `Discard` or `Don't save`**
@@ -82,3 +75,5 @@
 * For password settings:  
 	Purchases and In-app Purchases: `Always Require`
 	Free Download: `Require Password`
+
+
