@@ -76,4 +76,6 @@
 	Purchases and In-app Purchases: `Always Require`
 	Free Download: `Require Password`
 
+## Dictation & Speech
+* `Option` + `Esc` = Speak selected text : `Text to Speech` > Check `Speak selected text when the key is pressed`
 
