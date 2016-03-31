@@ -1,13 +1,12 @@
 # Homebrew
 
-Homebrew is the most popular package manager for OS X. It downloads formulae into `/Library/Caches/Homebrew`, and installs formulae into `/usr/local/Cellar/` and symlinks they into `/usr/local/bin`.
+Homebrew is the most popular package manager for OS X.
 
-**Note: **
+## Related directories
 
-1. To make the shell search order work globally for all users, you can export the path `/usr/local/bin` by edit `/private/etc/paths` file.
-2. Command `where xxx` lists locations where program `xxx` located.
-3. Command `Which xxx` tell user which `xxx` will the shell execute as usually. 
-4. Sometimes ZSH and Bash cache the contents of $PATH, you'd execute `hash -r` to forget all previously remembered utility locations.
+1. Homebrew downloads formulae into `/Library/Caches/Homebrew`.
+2. Then it installs formulae into `/usr/local/Cellar/`,
+3. and symlinks they into `/usr/local/bin`.
 
 ## Install
 
@@ -56,4 +55,26 @@ Exectue the uninstall script in terminal:
 
 _More details: <https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/FAQ.md> or execute `brew home`_
 
+## Homebrew tap
+
+Homebrew provide `brew tap` usage for users to access other repositories.
+
+For example,
+1. you can access the versioned formulae by `brew tap homebrew/versions`
+2. and then `brew install <formula>`.
+3. If conflicts happens(formula is provided by multiple repositories), try `brew install homebrew/versions/<formula>`
+
+## $Path problem
+
+**Note: Sometimes the programs installed by Homebrew don't replace the native program provided by OS X immediately. Read the following suggestions:**
+
+### Edit paths file
+
+* To make the shell search order work globally for all users, you can export the path `/usr/local/bin` by edit `/private/etc/paths` file.
+
+### Perform Hash command
+
+* `where xxx` lists locations where program `xxx` located.
+* `Which xxx` tell user which `xxx` will the shell execute as usually.
+* Sometimes ZSH and Bash cache the contents of $PATH, you'd execute `hash -r` to forget all previously cached utility locations.
 

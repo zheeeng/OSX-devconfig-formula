@@ -2,7 +2,7 @@
 
 Install Xcode command lines for software compiling.
 
-Steps:
+## Install
 
 1. Install Xcode from MAS or <https://developer.apple.com/xcode/>
 2. Open Xcode and agree with `Xcode and iOS SDK License Agreement` or
@@ -13,11 +13,11 @@ Steps:
 
 		xcode-select --install
 
-Scan available Xcode command line tools:
+*Tip:* Scan available Xcode command line tools:
 
 	ls /Library/Developer/CommandLineTools/usr/bin
 
-**Tip:** A solution to the slow speed of applications downloading from MAS:
+## A solution to the slow speed of applications downloading from MAS
 
 1. Use http monitor utility(e.g. `Charles`) capture the hostname of download link && download the application `.dmg` file.
 2. Change hosts file: `sudo vim /etc/hosts  ` && bind localhost entry `127.0.0.1` to target link hostname(we got in step 1).
