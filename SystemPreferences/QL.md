@@ -1,10 +1,10 @@
 ## Quick look plugins
 
-Check QL series here: <https://github.com/sindresorhus/quick-look-plugins>
+Check quick look plugins series here: <https://github.com/sindresorhus/quick-look-plugins>
 
-## Plugin descriptions
+## Plugin recommendation
 
-Those quick look plugins are recommended:
+These quick look plugins are recommended:
 
 * QLColorCode
 	> Preview source code files with syntax highlighting.
@@ -17,6 +17,8 @@ Those quick look plugins are recommended:
 * QLPrettyPatch
 	> Preview .patch files with differences highlighting.
 
-## Installation
+## Install
 
 	brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch
+
+

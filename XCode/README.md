@@ -1,4 +1,4 @@
-#XCode
+# XCode
 
 Install Xcode command lines for software compiling.
 
@@ -13,13 +13,15 @@ Steps:
 
 		xcode-select --install
 
-Scan avaliable Xcode command line tools:
+Scan available Xcode command line tools:
 
 	ls /Library/Developer/CommandLineTools/usr/bin
 
-**Tip:** Solution for slow MAS application download speed:
+**Tip:** A solution to the slow speed of applications downloading from MAS:
 
-1. Use http monitor utility(e.g. Charles) capture download link & download application dmg by download utility(e.g. wget, aria2c).
-2. Cli: `sudo vim /etc/hosts  ` & bind localhoal 127.0.0.1 to link hostname(we get in step 1).
-3. Move application dmg to temporary folder & run http serve in the folder: e.g. `sudo python -m SimpleHTTPServer 80`
-4. Download application from MAS again
+1. Use http monitor utility(e.g. `Charles`) capture the hostname of download link && download the application `.dmg` file.
+2. Change hosts file: `sudo vim /etc/hosts  ` && bind localhost entry `127.0.0.1` to target link hostname(we got in step 1).
+3. Move application `.dmg` file into a temporary folder && start a http service in the folder: e.g. `python -m SimpleHTTPServer 80`, `PHP -S localhost:80`
+4. Try downloading application from MAS again.
+
+

@@ -1,6 +1,7 @@
 # System Preferences
 
-_require: El Capitan_
-
 ## System
-** `` > `About this Mac` > `Software Update..` > update applications && Operation System(stable) ** 
+
+** `` > `About this Mac` > In `Overview` panel click into`Software Update..` > update applications && upgrade OS X to stable version ** 
+
+
