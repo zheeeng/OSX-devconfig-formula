@@ -23,11 +23,11 @@ Homebrew is the most popular package manager for OS X.
 
 ## Uninstall
 
-Exectue the uninstall script in terminal:
+Execute the uninstall script in terminal:
 
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"
 
-## Common Usage
+## Basic commands
 
 ```shell
    # Search formulae and get the info about a specific formula:
@@ -40,7 +40,7 @@ Exectue the uninstall script in terminal:
 	brew list [--versions]
 	# Show outdated Formulae:
 	brew outdated
-	# Remove older versions of a formula or everything at once (with option '-n' dryrun cleanup):
+	# Remove older versions of a formula or everything at once (with option '-n' dry-run cleanup):
 	brew cleanup <FORMULA>
 	brew cleanup
 	brew cleanup -n
@@ -55,18 +55,35 @@ Exectue the uninstall script in terminal:
 
 _More details: <https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/FAQ.md> or execute `brew home`_
 
-## Homebrew tap
+## Advanced commands
 
-Homebrew provide `brew tap` usage for users to access other repositories.
+```shell
+# Access other repository, such as the repository contains versioned formulae:
+brew tap <HOMEBREW REPOSITORY>
+brew tap homebrew/versions
+# remove a tapped repository:
+brew untap <REPOSITORY>
+# While installing a formula, if a formula is provided by multiple repositories, you'd specify the repository:
+brew install homebrew/versions/<FORMULA>
+# List the dependencies for an specific formula:
+brew deps <FORMULA>
+# List the installed formulae which specify a formula as dependency:
+brew uses --installed <FORMULA>
+# List the orphaned dependency packages:
+brew leaves
+```
 
-For example,
-1. you can access the versioned formulae by `brew tap homebrew/versions`
-2. and then `brew install <formula>`.
-3. If conflicts happens(formula is provided by multiple repositories), try `brew install homebrew/versions/<formula>`
+### List the dependencies of all formulae
 
-## $Path problem
+*Original links:<http://zanshin.net/2014/02/03/how-to-list-brew-dependencies/>*
 
-**Note: Sometimes the programs installed by Homebrew don't replace the native program provided by OS X immediately. Read the following suggestions:**
+```bash
+brew list | while read cask; do echo -n "\e[1;34m$cask ->\e[0m"; brew deps $cask | awk '{printf(" %s ", $0)}'; echo ""; done
+```
+
+## Make new installed program work immediately
+
+Sometimes you want to use the programs installed by Homebrew immediately, but the native programs provided by OS X is called. Read the following workarounds:
 
 ### Edit paths file
 
