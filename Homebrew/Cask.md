@@ -1,26 +1,36 @@
 # Homebrew Cask
 
-Homebrew Cask is used to manage binaries more simply, elegantly, and conveniently. And you can get software which is no longer avaiable for MAS through it.  
-Its usage is like `brew`.
+Homebrew Cask extend Homebrew for OS X GUI applications management. It requires Homebrew version 0.9.5+.
 
-## Installation
+It’s implemented as a homebrew external command called `cask`. (`brew cask search/install/uninstall...`)
 
-	brew install caskroom/cask/brew-cask
-
-or
+## Install
 
 	brew tap caskroom/cask
 	brew install brew-cask
 
-Formula installed by Homebrew Cask is stored in `/opt/homebrew-cask/Caskroom/`
+Homebrew Cask install formulae into `/opt/homebrew-cask/Caskroom/`. The downloads are stored in `/Library/Caches/Homebrew/Casks`.
 
-## LaunchRocket
+## Tab-completion
 
-A Mac PreferencePane for managing services with `launchd` -- "a unified, open-source service management framework for starting, stopping and managing daemons, applications, processes, and scripts. Written and designed by Dave Zarzycki at Apple, it was introduced with Mac OS X Tiger and is licensed under the Apache License."
+`oh-my-zsh` plugin `brew-cask` enables the tab-completion.
 
-	brew cask install launchrocket
 
-![LaunchRocket](https://github.com/jimbojsb/launchrocket/raw/master/screenshots/LaunchRocket.png)
+## Versioned casks
 
-_More details: <https://github.com/jimbojsb/launchrocket>_
+Tap `caskroom/versions` provide alternate versions of Casks(e.g. betas, nightly releases, old versions).
+
+    brew tap caskroom/versions
+
+## Font casks
+
+Tap `caskroom/fonts` allows you to use the same friendly Homebrew-style CLI workflow for the administration of binary font files on your Mac.
+
+    brew tap caskroom/fonts
+
+Font searching is temporarily disabled, one workaround is to use a regular expression search:
+
+    brew cask search /source-code-pro/
+
+Reference: <https://github.com/caskroom/homebrew-fonts>
 
