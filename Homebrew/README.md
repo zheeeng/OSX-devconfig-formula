@@ -19,7 +19,7 @@ Homebrew is the most popular package manager for OS X.
 
 		brew doctor
 
-    If everything goes well, you will get message: `Your system is ready to brew.` Otherwise, follow the prompted instructions.
+    If everything goes well, you will get the message: `Your system is ready to brew.` Otherwise, follow the prompted instructions.
 
 ## Uninstall
 
@@ -41,9 +41,7 @@ brew list [--versions]
 # Show outdated Formulae:
 brew outdated
 # Remove older versions of formulae or everything at once (with option '-n' dry-run cleanup):
-brew cleanup <FORMULAE>
-brew cleanup
-brew cleanup -n
+brew cleanup [<FORMULAE>] [-n]
 # Update the formulae and Homebrew itself:
 brew update
 # Upgrade
@@ -96,11 +94,11 @@ Sometimes you want to use the programs installed by Homebrew immediately, but th
 
 ### Edit paths file
 
-* To make the shell search order work globally for all users, you can export the path `/usr/local/bin` by edit `/private/etc/paths` file.
+* To make the shell search order work globally for all users, you can export the path `/usr/local/bin` by editing `/private/etc/paths` file.
 
 ### Run hash command
 
-* `where xxx` lists locations where program `xxx` located.
-* `Which xxx` tell user which `xxx` will the shell execute as usually.
+* `where xxx` lists directories where program named `xxx` located in.
+* `Which xxx` tells users which `xxx` will be executed actually.
 * Sometimes ZSH and Bash cache the contents of $PATH, you'd execute `hash -r` to forget all previously cached utility locations.
 
