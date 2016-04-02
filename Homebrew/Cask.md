@@ -13,8 +13,9 @@ Homebrew Cask install formulae into `/opt/homebrew-cask/Caskroom/`. The download
 
 ## Tab-completion
 
-`oh-my-zsh` plugin `brew-cask` enables the tab-completion.
+Check [Zsh/plugins](../iTerm2/zsh-plugins.html) section:
 
+Plugin `brew-cask` for Zsh enables the tab-completion feature.
 
 ## Versioned casks
 

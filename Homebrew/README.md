@@ -55,7 +55,16 @@ _More details: <https://github.com/Homebrew/homebrew/blob/master/share/doc/homeb
 
 ## Tab-completion
 
-`oh-my-zsh` plugin `brew` enables the tab-completion.
+Check [Zsh/plugins](../iTerm2/zsh-plugins.html) section:
+
+Plugin `brew` for Zsh enables the tab-completion feature. Moreover, some command aliases for brew are added:
+
+```
+alias brews='brew list -1'
+alias bubo='brew update && brew outdated'
+alias bubc='brew upgrade && brew cleanup'
+alias bubu='bubo && bubc'
+```
 
 ## Advanced commands
 
