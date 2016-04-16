@@ -4,7 +4,7 @@ Homebrew Cask extend Homebrew for OS X GUI applications management. It requires 
 
 It’s implemented as a homebrew external command called `cask`. (`brew cask search/install/uninstall...`)
 
-## Install
+## Installation
 
 	brew tap caskroom/cask
 	brew install brew-cask

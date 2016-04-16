@@ -8,7 +8,7 @@ Homebrew is the most popular package manager for OS X.
 2. Then it installs formulae into `/usr/local/Cellar/`,
 3. and symlinks they into `/usr/local/bin`.
 
-## Install
+## Installation
 
 1. ** Dependencies:** All are included in Xcode Command Line Tools.
 2. Download && execute install script in terminal:
@@ -21,9 +21,7 @@ Homebrew is the most popular package manager for OS X.
 
     If everything goes well, you will get the message: `Your system is ready to brew.` Otherwise, follow the prompted instructions.
 
-## Uninstall
-
-Execute the uninstall script in terminal:
+## Uninstallation
 
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"
 
@@ -89,7 +87,7 @@ brew uses --installed <FORMULAE>
 brew leaves
 ```
 
-### List the dependencies of all formulae
+### Listing the dependencies of all formulae
 
 *Original links:<http://zanshin.net/2014/02/03/how-to-list-brew-dependencies/>*
 
@@ -97,15 +95,15 @@ brew leaves
 brew list | while read cask; do echo -n "\e[1;34m$cask ->\e[0m"; brew deps $cask | awk '{printf(" %s ", $0)}'; echo ""; done
 ```
 
-## Make new installed programs work immediately
+## Making newest installed programs work immediately
 
 Sometimes you want to use the programs installed by Homebrew immediately, but the native programs provided by OS X is called. Read the following workarounds:
 
-### Edit paths file
+### Editing paths file
 
 * To make the shell search order work globally for all users, you can export the path `/usr/local/bin` by editing `/private/etc/paths` file.
 
-### Run hash command
+### Running hash command
 
 * `where xxx` lists directories where program named `xxx` located in.
 * `Which xxx` tells users which `xxx` will be executed actually.

@@ -2,7 +2,7 @@
 
 Install Xcode command lines for software compiling.
 
-## Install
+## Installation
 
 1. Install Xcode from MAS or <https://developer.apple.com/xcode/>
 2. Open Xcode and agree with `Xcode and iOS SDK License Agreement` or

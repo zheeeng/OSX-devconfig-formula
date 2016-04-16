@@ -1,14 +1,14 @@
 # Node.js 
 
-Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. 
+> Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. 
 
-## Install Node.js with NVM
+## Installing Node.js with NVM
 
 NVM (Node Version Manager) is recommended for quick switching node to other versions. A simple bash script `nvm.sh` which is generated into `~/.nvm/` provides a series of shell commands to manage node versions. 
 
 NVM works like `Virtualenv`, all nodes under a sandboxes, set $PATH containing your specified node. All installed versions locate at `~/.nvm/versions/node` by default.
 
-### Install NVM
+### Installing NVM
 
 1. Get `nvm.sh` and related files:
 
@@ -18,11 +18,11 @@ NVM works like `Virtualenv`, all nodes under a sandboxes, set $PATH containing y
 
         . ~/.nvm/nvm.sh
 
-### NVM auto startup upon login
+### Auto starting NVM upon login
 
 `oh-my-zsh` plugin `nvm` source `~/.nvm/nvm.sh` automatically.
 
-### Upgrade NVM
+### Upgrading NVM
 
     cd "$NVM_DIR" && git pull origin master && git checkout `git describe --abbrev=0 --tags`
 
