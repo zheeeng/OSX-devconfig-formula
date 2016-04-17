@@ -1,5 +1,9 @@
 # Github
 
+> Verifying your primary email address ensures strengthened security and allows GitHub staff to better assist you if you forget your password.
+
+Goto `Emails` panel in profile settings, check your emails or add && verify your email addresses.
+
 ## Adding SSH key to GitHub account
 
 To enable you access your GitHub repository without passphrase, you'd add your SSH public key into your account settings.
