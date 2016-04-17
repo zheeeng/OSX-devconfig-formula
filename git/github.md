@@ -4,6 +4,14 @@
 
 Goto `Emails` panel in profile settings, check your emails or add && verify your email addresses.
 
+## Adding GPG key to Github account
+
+To enable you sign commits and tags with GPG, you'd add your GPG public key into your account settings. Before it, make sure you've verified your email address. If there are not any existing GPG keys, follow the instruction in [Credentials/GPG](../Credentials/README.html#GPG) section. You'd ensure the email address for this GPG keypair is the verified email address at GitHub. After your GPG keys get ready, copy the contents of your GPG public key to your clipboard:
+
+    gpg --armor --export <key-id> | pbcopy
+
+Then, login Github and goto `SSH and GPG Keys` panel in profile settings. Paste && submit your public GPG key to Github, save the configuration.
+
 ## Adding SSH key to GitHub account
 
 To enable you access your GitHub repository without passphrase, you'd add your SSH public key into your account settings.
@@ -29,4 +37,5 @@ You will meet the SSH key's fingerprint confirmation when you access through SSH
 After this, we expect a bonjour message is printed out at every time you access GitHub by SSH.
 
 **Note:** If you're switching from HTTPS to SSH, you'll need to update your remote repository URLs.
+
 
