@@ -38,4 +38,10 @@ After this, we expect a bonjour message is printed out at every time you access 
 
 **Note:** If you're switching from HTTPS to SSH, you'll need to update your remote repository URLs.
 
+## Github Pages
+
+## Fun on Github
+
+[A list of cool features of Git and GitHub](http://git.io/sheet)
+
 

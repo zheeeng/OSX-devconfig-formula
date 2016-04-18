@@ -35,6 +35,33 @@ gpg --decrypt file.gpg --output file
 
 *More docs on: <https://www.gnupg.org/gph/en/manual.html>*
 
+## Using gpg-agent to manage your private keys
+
+*Reference: <https://gist.github.com/bmhatfield/cc21ec0a3a2df963bffa3c1f884b676b>*
+
+> In order for gpg to find gpg-agent, gpg-agent must be running, and there must be an env variable pointing GPG to the gpg-agent socket.
+
+1. `gpg-agent-startup.sh` does this work above. It is sourced in `envconfig.sh`, see the [envconfig.sh/gpg-agent-startup.sh](../envconfig.sh/gpg-agent-startup.sh.html) section.
+
+    Details in <https://gist.github.com/bmhatfield/cc21ec0a3a2df963bffa3c1f884b676b#file-profile>.
+
+2. Install the dependencies:
+
+        brew install gpg-agent pinentry-mac
+
+3. Configure the GPG components:
+
+    * In `~/.gnupg/gpg.conf`, uncomment `# use-agent` and add `batch` for preventing the successful interactive messages. 
+
+        Details in <https://gist.github.com/bmhatfield/cc21ec0a3a2df963bffa3c1f884b676b#file-gpg-conf>.
+
+    * In `~/.gnupg/gpg-agent.conf`, add `use-standard-socket
+` and `pinentry-program /usr/local/bin/pinentry-mac`.
+
+        Details in <https://gist.github.com/bmhatfield/cc21ec0a3a2df963bffa3c1f884b676b#file-gpg-agent-conf>.
+
+4. Restart your terminal for sourcing the `gpg-agent-startup.sh`.
+
 # SSH
 
 > Secure Shell, or SSH, is a cryptographic (encrypted) network protocol operating at layer 7 of the OSI Model to allow remote login and other network services to operate securely over an unsecured network.
