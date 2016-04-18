@@ -17,7 +17,8 @@ git config --global user.email "your_email@example.com"
 git config --global credential.helper osxkeychain
 # (Optional) Add accessory credential storage -- plain-text credentials file on your portable driver
 git config --global credential.helper "store --file <path-to-your-portable-driver>/.git-credentials"
-# Specify the default gpg key-id:
+# Enable GPG sign on all comments and specify the default GPG key-id:
+git config --global commit.gpgsign true
 git config --global user.signingkey <gpg-key-id>
 ```
 
