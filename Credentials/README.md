@@ -59,7 +59,7 @@ scp [-r] user@host1:file1 user@host2:file2
 
         ssh-keygen
         
-2. Send public key to remote host:
+2. Send public key to the remote host:
 
         ssh user@host 'mkdir -p .ssh && cat >> .ssh/authorized_keys' < ~/.ssh/id_rsa.pub
 
@@ -67,13 +67,17 @@ scp [-r] user@host1:file1 user@host2:file2
 
 1. Ensure ssh-agent is enabled:
 
+        ps -e | grep ssh
+
+    If not, run the agent:
+
         eval "$(ssh-agent -s)"
 
 2. Add your SSH key to the ssh-agent:
 
         ssh-add ~/.ssh/id_rsa
 
-3. Check the loaded keys or test wether the passphrase-free works:
+3. Check the loaded keys or test whether the passphrase-free works:
 
         ssh-add -l
         ssh -T user@host
