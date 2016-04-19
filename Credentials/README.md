@@ -41,7 +41,7 @@ gpg --decrypt file.gpg --output file
 
 > In order for gpg to find gpg-agent, gpg-agent must be running, and there must be an env variable pointing GPG to the gpg-agent socket.
 
-1. `gpg-agent-startup.sh` does this work above. It is sourced in `envconfig.sh`, see the [envconfig.sh/gpg-agent-startup.sh](../envconfig.sh/gpg-agent-startup.sh.html) section.
+1. `gpg-agent-startup.sh` does this work above. It is sourced in the processing of `envconfig`, see the [envconfig/gpg-agent-startup.sh](../envconfig.sh/gpg-agent-startup.sh.html) section.
 
     Details in <https://gist.github.com/bmhatfield/cc21ec0a3a2df963bffa3c1f884b676b#file-profile>.
 
