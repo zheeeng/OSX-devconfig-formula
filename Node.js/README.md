@@ -2,9 +2,15 @@
 
 > Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. 
 
+Many utilities are built with Node, it's necessary for anyone installs it. If you are not a developer, just install it by:
+
+    brew install node
+
+If you are a developer, version manager for Node is the must-have. Two alternative choices are recommended, `n` modlues and `NVM`. [This article](http://www.mattpalmerlee.com/2013/03/23/installing-and-switching-between-multiple-versions-of-node-js-n-vs-nvm/) compare them in detail. For avoiding the global modules don't work after node version up/degrading, NVM is finally picked.
+
 ## Installing Node.js with NVM
 
-NVM (Node Version Manager) is recommended for quick switching node to other versions. A simple bash script `nvm.sh` which is generated into `~/.nvm/` provides a series of shell commands to manage node versions. 
+NVM (Node Version Manager) is employeed for quick switching node to other versions. A simple bash script `nvm.sh` which is generated into `~/.nvm/` provides a series of shell commands to manage node versions. 
 
 NVM works like `Virtualenv`, all nodes under a sandboxes, set $PATH containing your specified node. All installed versions locate at `~/.nvm/versions/node` by default.
 
