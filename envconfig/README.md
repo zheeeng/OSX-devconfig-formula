@@ -33,7 +33,10 @@ Reference to: <http://sourabhbajaj.com/mac-setup/iTerm/zsh.html>
     alias ccat=source-highlight --out-format=esc -o STDOUT -i
     alias cppcompile='c++ -std=c++11 -stdlib=libc++'
     alias -s tar="tar -xvf"
-	alias -s gz="tar -xzvf"
-	alias -s tgz="tar -xzvf"
-	alias -s bz2="tar -xjvf"
-	alias -s zip="unzip"
+    alias -s gz="tar -xzvf"
+    alias -s tgz="tar -xzvf"
+    alias -s bz2="tar -xjvf"
+    alias -s zip="unzip"%
+    
+
+
