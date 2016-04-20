@@ -78,11 +78,13 @@ scp [-r] user@host1:file1 user@host2:file2
 ```
 **Note:** The default port of SSH protocal is 22.
 
+SSH has many powerful tunneling features, if you're interested at them, plz read [SSH: The Secure Shell: The Definitive Guide, Section 9.2 Port Forwarding](http://docstore.mik.ua/orelly/networking_2ndEd/ssh/ch09_02.htm) published by O'Reilly.
+
 ## Generating an SSH key
 
 > SSH keys are a way to identify trusted computers without involving passwords.
 
-1. Generate SSH key:
+1. Generate SSH key, it is necessary to set a passphrase what you like:
 
         ssh-keygen
         
@@ -90,21 +92,25 @@ scp [-r] user@host1:file1 user@host2:file2
 
         ssh user@host 'mkdir -p .ssh && cat >> .ssh/authorized_keys' < ~/.ssh/id_rsa.pub
 
+    You can also use other ways to pass your pubkey to the `.ssh/authorized_keys` file at remote.
+
 ## Using ssh-agent to manage your private keys
 
-1. Ensure ssh-agent is enabled:
+By default, OS X automatically start `ssh-agent` when you login. You can check whether it does work by:
 
-        ps -e | grep ssh
+    ps -e | grep ssh-agent
 
-    If not, run the agent:
+If not, you'd run the agent and make it run automatically when logining:
 
-        eval "$(ssh-agent -s)"
+    eval "$(ssh-agent -s)" && echo 'eval "$(ssh-agent -s)"' >> $ENVCONFIG/bootstrap.sh
 
-2. Add your SSH key to the ssh-agent:
+Don't make multiple agents running.
+
+1. Add your SSH key to the ssh-agent:
 
         ssh-add ~/.ssh/id_rsa
 
-3. Check the loaded keys or test whether the passphrase-free works:
+2. Check the loaded keys or test whether the passphrase-free works if you has passed by your pubkey to the remote host:
 
         ssh-add -l
         ssh -T user@host
