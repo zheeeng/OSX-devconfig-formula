@@ -37,30 +37,40 @@ gpg --decrypt file.gpg --output file
 
 ## Using gpg-agent to manage your private keys
 
-*Reference: <https://gist.github.com/bmhatfield/cc21ec0a3a2df963bffa3c1f884b676b>*
-
-> In order for gpg to find gpg-agent, gpg-agent must be running, and there must be an env variable pointing GPG to the gpg-agent socket.
-
-1. `gpg-agent-startup.sh` does this work above. It is sourced in the processing of `envconfig`, see the [envconfig/gpg-agent-startup.sh](../envconfig.sh/gpg-agent-startup.sh.html) section.
-
-    Details in <https://gist.github.com/bmhatfield/cc21ec0a3a2df963bffa3c1f884b676b#file-profile>.
-
-2. Install the dependencies:
+1. Install the dependencies:
 
         brew install gpg-agent pinentry-mac
 
-3. Configure the GPG components:
+    You will get these instruction prompts:
 
-    * In `~/.gnupg/gpg.conf`, uncomment `# use-agent` and add `batch` for preventing the successful interactive messages. 
+    ```
+    Remember to add "use-standard-socket" to your ~/.gnupg/gpg-agent.conf file.
+    ```
 
-        Details in <https://gist.github.com/bmhatfield/cc21ec0a3a2df963bffa3c1f884b676b#file-gpg-conf>.
+    ```
+    You can now set this as your pinentry program like
+    ~/.gnupg/gpg-agent.conf
+        pinentry-program /usr/local/bin/pinentry-mac
+    ```
 
-    * In `~/.gnupg/gpg-agent.conf`, add `use-standard-socket
-` and `pinentry-program /usr/local/bin/pinentry-mac`.
+    ```
+    .app bundles were installed.
+    Run `brew linkapps pinentry-mac` to symlink these to /Applications.
+    ```
 
-        Details in <https://gist.github.com/bmhatfield/cc21ec0a3a2df963bffa3c1f884b676b#file-gpg-agent-conf>.
+2. Following these instrucitons, configure the GPG components:
 
-4. Restart your terminal for sourcing the `gpg-agent-startup.sh`.
+        echo 'use-standard-socket' >> ~/.gnupg/gpg-agent.conf && echo 'pinentry-program /usr/local/bin/pinentry-mac' >> ~/.gnupg/gpg-agent.conf
+
+    For `~/.gnupg/gpg.conf`,
+    * uncomment `# use-agent` to tell gpg to use external agent
+    * and add `batch` for preventing the successful interactive messages. 
+
+3. Check [Zsh plugin: gpg-agent](../iTerm2/zsh-plugins.html#gpg-agent) section and add this plugin:
+
+    > Plugin `gpg-agent` enable gpg-agent startup automatically when logining and export an env variable pointing GPG to the gpg-agent socket.
+
+4. Configuration will work after `.oh-my-zsh` loaded.
 
 # SSH
 
