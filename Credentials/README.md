@@ -37,6 +37,8 @@ gpg --decrypt file.gpg --output file
 
 ## Using gpg-agent to manage your private keys
 
+The `pinentry` bundled with `gpg-agent` will require your passphrase when the cache ttl times out. The `pinentry-mac` is a GUI version of `pinentry` and allows the user to store the passphrase in the Mac OS X keychain. It avoids you from frequently typing your passphrase.
+
 1. Install the dependencies:
 
         brew install gpg-agent pinentry-mac
@@ -68,9 +70,9 @@ gpg --decrypt file.gpg --output file
 
 3. Check [Zsh plugin: gpg-agent](../iTerm2/zsh-plugins.html#gpg-agent) section and add this plugin:
 
-    > Plugin `gpg-agent` enable gpg-agent startup automatically when logining and export an env variable pointing GPG to the gpg-agent socket.
+    > Plugin `gpg-agent` enables gpg-agent startup automatically when logining and export an env variable pointing GPG to the gpg-agent socket.
 
-4. Configuration will work after `.oh-my-zsh` loaded.
+4. Configuration will work after `.oh-my-zsh` is loaded.
 
 # SSH
 
@@ -88,7 +90,7 @@ scp [-r] user@host1:file1 user@host2:file2
 ```
 **Note:** The default port of SSH protocal is 22.
 
-SSH has many powerful tunneling features, if you're interested at them, plz read [SSH: The Secure Shell: The Definitive Guide, Section 9.2 Port Forwarding](http://docstore.mik.ua/orelly/networking_2ndEd/ssh/ch09_02.htm) published by O'Reilly.
+SSH has many powerful tunneling features, if you're interested in them, plz read [SSH: The Secure Shell: The Definitive Guide, Section 9.2 Port Forwarding](http://docstore.mik.ua/orelly/networking_2ndEd/ssh/ch09_02.htm) published by O'Reilly.
 
 ## Generating an SSH key
 
@@ -98,7 +100,7 @@ SSH has many powerful tunneling features, if you're interested at them, plz read
 
         ssh-keygen
         
-2. Send public key to the remote host:
+2. Send the public key to the remote host:
 
         ssh user@host 'mkdir -p .ssh && cat >> .ssh/authorized_keys' < ~/.ssh/id_rsa.pub
 
@@ -106,7 +108,7 @@ SSH has many powerful tunneling features, if you're interested at them, plz read
 
 ## Using ssh-agent to manage your private keys
 
-By default, OS X automatically start `ssh-agent` when you login. You can check whether it does work by:
+By default, OS X automatically starts `ssh-agent` when you login. You can check whether it does work by:
 
     ps -e | grep ssh-agent
 
