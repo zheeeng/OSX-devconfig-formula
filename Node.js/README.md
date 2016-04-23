@@ -2,7 +2,7 @@
 
 > Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. 
 
-Many utilities are built with Node, it's necessary for anyone installs it. If you are not a developer, just install it by:
+Many utilities are built with Node, it's necessary for anyone installs it. If you are **not** a developer, just install it by:
 
     brew install node
 
@@ -26,7 +26,15 @@ NVM works like `Virtualenv`, all nodes under a sandboxes, set $PATH containing y
 
 ### Auto starting NVM upon login
 
-`oh-my-zsh` plugin `nvm` source `~/.nvm/nvm.sh` automatically.
+Add `nvm` plugin into `oh-my-zsh`.
+
+Check [Zsh plugin: nvm](../iTerm2/zsh-plugins.html#nvm) section:
+
+> Plugin `nvm` source `~/.nvm/nvm.sh` automatically when you are logining shell.
+
+### Installing Node
+
+    nvm install node
 
 ### Upgrading NVM
 
@@ -71,7 +79,7 @@ You can create a `.nvmrc` file containing version number in the project root dir
 
 ## Node-docs
 
-Check [Zsh/plugins](../iTerm2/zsh-plugins.html) section:
+Check [Zsh plugin: node](../iTerm2/zsh-plugins.html#node) section:
 
-Plugin `node` for Zsh allows you to run command `node-docs` to access the documentation of the current node version.
+> Plugin `node` for Zsh allows you to run command `node-docs` to access the documentation of the current node version.
 
