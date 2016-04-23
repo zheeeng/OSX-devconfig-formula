@@ -1,6 +1,6 @@
 # Ruby
 
-Ruby is an essential build tool for developing. Many utilities or their installation scripts are built with Ruby language, or the Ruby package manager, RubyGems. For versions swiching, and with the reason not messing up the native Ruby installed by OS X, we employee `rbenv` to manage the Ruby versions. An alternative is `RVM` and rbenv is incompatible with RVM. There is a [comic](http://jonathan-jackson.net/rvm-and-rbenv) showing you a comparison. 
+Ruby is an essential build tool for developing. Many utilities or their installation scripts are built with Ruby language, or the Ruby package manager, RubyGems. For the convenience for versions switching, and with the reason not messing up the native Ruby installed by OS X, we employee `rbenv` to manage the Ruby versions. An alternative is `RVM` and rbenv is incompatible with RVM. There is a [comic](http://jonathan-jackson.net/rvm-and-rbenv) showing you a comparison. 
 
 ## Installing Ruby with rbenv
 
@@ -12,15 +12,15 @@ Ruby is an essential build tool for developing. Many utilities or their installa
 
         brew install rbenv ruby-build rbenv-default-gems
 
-2. Add `rbenv` plugin into `oh-my-zsh`, it initilize `rbenv` automatically when you are logining shell and changes the defualt `rbenv` variables.
+2. Add `rbenv` plugin into `oh-my-zsh`. It initilize `rbenv` automatically when you are logining shell and changes the defualt `rbenv` variables.
 
-    Check [Zsh plugin: rbenv](../iTerm2/zsh-plugins.html#rbenv) section:
+    Check [Zsh plugins: rbenv](../iTerm2/zsh-plugins.html#rbenv) section:
 
     > Plugin `rbenv` changes the defualt `rbenv` variables and exports them, provides some useful related function, explicitly tells `rbenv` to use Zsh, and initilize the `rbenv` automatically.
 
     With the reason you install `rbenv` by Homebrew, this plugin will point the `rbenv` directory under Homebrew formulea repository, instead of `~/.rbenv`, to RBENV_ROOT. 
 
-3. Reopen a new termianl tab or restart your shell for sourcing settings.
+3. Reopen a new terminal tab or restart your shell for sourcing settings.
 
 ### Install Ruby
 
@@ -47,7 +47,7 @@ Ruby is an essential build tool for developing. Many utilities or their installa
 
 ### Specifing the Ruby running version for shims
 
-When you exectue a shim, rbenv specifies the running version of Ruby for this shim by reading a specified env variable or some files in order:
+When you execute a shim, rbenv specifies the running version of Ruby for this shim by reading a specified env variable or some files in order:
 
 1. `RBENV_VERSION` environment variable.
 2. The first `.ruby-version` file in the directory of the target script or in the script's parent directories.
@@ -59,4 +59,19 @@ When you exectue a shim, rbenv specifies the running version of Ruby for this sh
 2. `rbenv global <version>` changes the content of `.ruby-version` file under RBENV_ROOT.
 3. `--unset` option cancel the version specifying.
 
+### Binding gems with each new Ruby version
+
+> `rbenv-default-gems` automatically installs the gems listed in `$(rbenv root)/default-gems` file every time you successfully install a new version of Ruby with rbenv install.
+
+A Sample file:
+
+```
+# One per line
+bundler
+rbenv-gem-rehash
+# Specifing a version
+bcat ~>0.6
+# Specifing prerelease version
+rails --pre
+```
 
