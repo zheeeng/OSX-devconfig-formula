@@ -10,30 +10,58 @@
 
     gpg --gen-key
 
-You cloud identify each public by `<key-id>`. In keypair generating, instruction prompts ask your `your_name`, `your_email@example.com`, `key comment` and a `passphrase`. The `<key-id>` will finally look like `"your_name (key comment) <your_email@example.com>"`.
+You cloud identify each public by `<user-id>`. In keypair generating, instruction prompts ask your `your_name`, `your_email@example.com`, `key comment` and a `passphrase`. The `<user-id>` will finally look like `"your_name (key comment) <your_email@example.com>"`.
 
-## Other common Usage
+## Other common usages
 
 ```shell
-# Generate fingerprint:
-gpg --fingerprint <key-id>
-# Display keys or only secret keys:
-gpg --list-keys
-gpg --list-secret-keys
+# Display public keys or secret keys, from here you can obtain the key-id of your keys,
+# feed with '--fingerprint', or use this option stand alone, obtain the fingerprint of your keys:
+gpg --list-keys [--fingerprint]
+gpg --list-secret-keys [--fingerprint]
+gpg --fingerprint <user-id | key-id | fingerprint>
 # Delete secret or public key (secret deletion must before its public key deletion):
-gpg --delete-secret-key <key-id>
-gpg --delete-key <key-id>
+gpg --delete-secret-key <user-id | key-id | fingerprint>
+gpg --delete-key <user-id | key-id | fingerprint>
 # Export public and secret key with ASCII:
-gpg --armor --export <key-id> > public.key
-gpg --armor --export-secret-keys <key-id> > private.key
-# Import public key file:
+gpg --armor [--output <public.key>] --export <user-id | key-id | fingerprint>
+gpg --armor [--output <private.key>] --export-secret-keys <user-id | key-id | fingerprint> > 
+# Import a public key file:
 gpg --import <publick.key>
-# Encrypt and Decrypt file:
-gpg --recipient <key-id> --encrypt file --output file.gpg
-gpg --decrypt file.gpg --output file
+# Encrypt and Decrypt a file:
+gpg --recipient <user-id | key-id | fingerprint> [--output file.gpg] --encrypt <file>
+gpg [--output <file>] --decrypt <file.gpg>
+# Sign a file in binary form in text form:
+gpg [--output <file.gpg>] [--local-user <user-id | key-id | fingerprint>] --sign <file>
+gpg [--output <file.asc>] [--local-user <user-id | key-id | fingerprint>] --clearsign <file>
+# Create detached signature on a file:
+gpg [--armor] [--output <file.sig>] [--local-user <user-id | key-id | fingerprint>] --detach-sign <file>
+# Verify signature:
+gpg --verify <file.gpg | file.asc>
+gpg --verify <file.sig> <file>
 ```
 
 *More docs on: <https://www.gnupg.org/gph/en/manual.html>*
+
+### Distributing GPG keys and fetching
+
+You cloud send your keys to a keyserver which closes to you. The major keyservers around the world synchronize themselves.
+
+```shell
+# Send keys to keyservers:
+gpg [--keyserver <keyserver address>] -send-keys <keyid | fingerprint>
+# Receive keys from keyservers:
+gpg [--keyserver <keyserver address>] -recv-keys <keyid>
+```
+
+A list of a serval popular keyservers:
+
+* keys.gnupg.net
+* hkp://subkeys.pgp.net
+* http://pgp.mit.edu
+* hkp://pool.sks-keyservers.net
+* hkp://zimmermann.mayfirst.org
+* http://keyserver.ubuntu.com
 
 ## Using gpg-agent to manage your private keys
 
@@ -60,19 +88,20 @@ The `pinentry` bundled with `gpg-agent` will require your passphrase when the ca
     Run `brew linkapps pinentry-mac` to symlink these to /Applications.
     ```
 
-2. Following these instrucitons, configure the GPG components:
+2. Following these instructions, configure the GPG components:
 
         echo 'use-standard-socket' >> ~/.gnupg/gpg-agent.conf && echo 'pinentry-program /usr/local/bin/pinentry-mac' >> ~/.gnupg/gpg-agent.conf
+        brew linkapps pinentry-mac
 
-    For `~/.gnupg/gpg.conf`,
-    * uncomment `# use-agent` to tell gpg to use external agent
-    * and add `batch` for preventing the successful interactive messages. 
+    Edit `~/.gnupg/gpg.conf` and uncomment `# use-agent` to tell gpg to use external agent
 
-3. Check [Zsh plugin: gpg-agent](../iTerm2/zsh-plugins.html#gpg-agent) section and add this plugin:
+3. Check [Zsh plugins: gpg-agent](../iTerm2/zsh-plugins.html#gpg-agent) section and add this plugin:
 
-    > Plugin `gpg-agent` enables gpg-agent startup automatically when logining and export an env variable pointing GPG to the gpg-agent socket.
+    > Plugin `gpg-agent` enables gpg-agent startup automatically when you log in and export an env variable pointing GPG to the gpg-agent socket.
 
 4. Configuration will work after `.oh-my-zsh` is loaded.
+
+Every time pinentry-mac prompt out for passphrase, you could select the option `Save in Keychain`.
 
 # SSH
 
@@ -112,7 +141,7 @@ By default, OS X automatically starts `ssh-agent` when you login. You can check 
 
     ps -e | grep ssh-agent
 
-If not, you'd run the agent and make it run automatically when logining:
+If not, you'd run the agent and make it run automatically when you login:
 
     eval "$(ssh-agent -s)" && echo 'eval "$(ssh-agent -s)"' >> $ENVCONFIG/bootstrap.sh
 
