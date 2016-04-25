@@ -2,13 +2,15 @@
 
 > Verifying your primary email address ensures strengthened security and allows GitHub staff to better assist you if you forget your password.
 
-Goto `Emails` panel in profile settings, check your emails or add && verify your email addresses.
+Goto `Emails` panel in profile settings, check your emails or add && verify your email addresses. It's required by GPG verification.
 
 ## Adding GPG key to Github account
 
-To enable you sign commits and tags with GPG, you'd add your GPG public key into your account settings. Before it, make sure you've verified your email address. If there are not any existing GPG keys, follow the instruction in [Credentials/GPG](../Credentials/README.html#GPG) section. You'd ensure the email address for this GPG keypair is the verified email address at GitHub. After your GPG keys get ready, copy the contents of your GPG public key to your clipboard:
+To enable you sign commits and tags with GPG, you'd add your GPG public key into your account settings. If there are not any existing GPG keys, follow the instruction in [Credentials: GPG](../Credentials/README.html#GPG) section. You'd ensure the email address for this GPG keypair is the verified email address at GitHub.
 
-    gpg --armor --export <key-id> | pbcopy
+Once your GPG keys get prepared, copy the contents of your GPG public key to your clipboard:
+
+    gpg --armor --export <user-id | key-id | fingerprint> | pbcopy
 
 Then, login Github and goto `SSH and GPG Keys` panel in profile settings. Paste && submit your public GPG key to Github, save the configuration.
 
