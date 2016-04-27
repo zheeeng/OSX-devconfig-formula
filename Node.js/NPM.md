@@ -1,12 +1,12 @@
-# npm
+# NPM
 
-npm is a package manager for JavaScript and the npm command-line tool is bundled with Node.js.
+NPM is a package manager for JavaScript and the NPM command-line tool is bundled with Node.js.
 
-Global packages are installed in `/usr/local/lib/node_modules`, you can use these packages as command line tools. Adding option `-g` on your npm commands enables npm commands to work globally.
+Global packages are installed in `/usr/local/lib/node_modules`, you can use these packages as command line tools. Adding option `-g` on your NPM commands enables NPM commands to work globally.
 
-Local packages are used as modules to support your project work. You can declare the necessary packages as `dependencies` for production or `devDependencies` for development or testing in `package.json` file, then simply run `npm install` to install packages. While installing node modules, npm will look for the higher directories which contain `node_modules` folder or `package.json` file from current directory and installs modules in it.
+Local packages are used as modules to support your project work. You can declare the necessary packages as `dependencies` for production or `devDependencies` for development or testing in `package.json` file, then simply run `npm install` to install packages. While installing node modules, NPM will look for the higher directories which contain `node_modules` folder or `package.json` file from current directory and installs modules in it.
 
-## npm basic usage
+## Usages
 
 ```shell
 # Install packages:
@@ -26,9 +26,9 @@ Run `npm -l` or visit <https://docs.npmjs.com/cli/> for more informations.
 
 ### Tab-completion
 
-Check [Zsh/plugins](../iTerm2/zsh-plugins.html) section:
+Check [Zsh plugins: npm](../iTerm2/zsh-plugins.html#npm) section:
 
-Plugin `npm` for ZSH enables the tab-completion feature. Moreover, some command aliases for npm are added.
+> Plugin NPM for ZSH enables the tab-completion feature. Moreover, some NPM command aliases are injected in.
 
 ```
 alias npmg="npm i -g "
@@ -40,7 +40,7 @@ alias npmO="npm outdated"
 
 ## `package.json` file
 
-For generating `package.json`, just run `npm init` and follow the prompt instructions. Additionally, you can get a default `package.json` by running `npm init -y`. If there is no description field in the package.json, npm uses the first line of the `README.md` or `README` instead.
+For generating `package.json`, just run `npm init` and follow the prompt instructions. Additionally, you can get a default `package.json` by running `npm init -y`. If there is no description field in the package.json, NPM uses the first line of the `README.md` or `README` instead.
 
 Check more [details](https://docs.npmjs.com/files/package.json) or run `npm help package.json`.
 
