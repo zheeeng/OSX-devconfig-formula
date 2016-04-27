@@ -6,7 +6,7 @@ Many utilities are built with Node, it's necessary for anyone installs it. If yo
 
     brew install node
 
-If you are a developer, version manager for Node is the must-have. Two alternative choices are recommended, `n` modlues and `NVM`. [This article](http://www.mattpalmerlee.com/2013/03/23/installing-and-switching-between-multiple-versions-of-node-js-n-vs-nvm/) compare them in detail. For avoiding the global modules don't work after node version up/degrading, NVM is finally picked.
+If you are a developer, version manager for Node is the must-have. Two alternative choices are recommended, `n` modlue and NVM. [This article](http://www.mattpalmerlee.com/2013/03/23/installing-and-switching-between-multiple-versions-of-node-js-n-vs-nvm/) compare them in detail. For avoiding the global modules don't work after node version up/degrading, NVM is finally picked.
 
 ## Installing Node.js with NVM
 
@@ -26,11 +26,11 @@ NVM works like `Virtualenv`, all nodes under a sandboxes, set $PATH containing y
 
 ### Auto starting NVM upon login
 
-Add `nvm` plugin into `oh-my-zsh`.
+Add NVM plugin into `oh-my-zsh`.
 
-Check [Zsh plugin: nvm](../iTerm2/zsh-plugins.html#nvm) section:
+Check [Zsh plugins: nvm](../iTerm2/zsh-plugins.html#nvm) section:
 
-> Plugin `nvm` source `~/.nvm/nvm.sh` automatically when you are logining shell.
+> Plugin NVM source `~/.nvm/nvm.sh` automatically when you are logining shell.
 
 ### Installing Node
 
@@ -42,7 +42,7 @@ Check [Zsh plugin: nvm](../iTerm2/zsh-plugins.html#nvm) section:
 
 ## Common NVM usages
 
-You can use the alias instead of the version pointer for nvm operation, such as
+You can use the alias instead of the version pointer for NVM operation, such as
 
 * 'node': the latest version of node
 * 'iojs': the latest version of io.js'
@@ -71,9 +71,9 @@ nvm deactivate
 nvm alias default node
 ```
 
-### .nvmrc
+### Specifying the NVM version for particular project
 
-You can create a `.nvmrc` file containing version number in the project root directory (or any parent directory). `nvm use`, `nvm install`, `nvm exec`, `nvm run`, and `nvm which` will all respect an `.nvmrc` file when a version is not supplied.
+A file named `.nvmrc` which contains the version number in the project's root directory will be respected by NVM commands—such as `nvm use`, `nvm install`, `nvm exec`, `nvm run`, and `nvm which`—in the highest priority:
 
     echo "5.11" > .nvmrc
 
