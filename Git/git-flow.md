@@ -157,4 +157,16 @@ In other situations, you need to link remote repository through commands:
         git fetch -p
         git flow release delete <release version>
 
+### Bugfix
+
+1. Create && switch to a `hotfix` branch based on the latest commit on `develop` branch by default.
+
+        git flow bugfix start <bug name>
+
+2. After bugfixing commited, finish this branch:
+
+        git flow bugfix finish <bug name>
+
+    It merges the `bugfix` branch back to `develop` branch and removes the `bugfix` branch.
+
 
