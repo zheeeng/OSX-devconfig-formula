@@ -14,8 +14,8 @@ The git-flow (AVH Edition) provides development model on repository operations e
 * `develop`: It is the long-term development branch, merge all developed features, released versions and fixed bugs and hotfixes. 
 * `feature/<feature name>`: It is used for feature development.
 * `release/<release version name>`: It is used for next release.
-* `bugfix/<bug name>`: When you encouter bugs, create a `bugfix` branch off from `develop`.
-* `hotfix/<hotfix version>`: When you get feedbacks to patch a hotfix, create a `hotfix` branch off from `master`.
+* `bugfix/<bug name>`: When you encouter bugs, create a `bugfix` branch start off from `develop`.
+* `hotfix/<hotfix version>`: When you get feedbacks to patch a hotfix, create a `hotfix` branch start off from `master`.
 * `support`: To satisfy some customers, you cloud add some special features on a `support` branch which is based on a specific production version.
 
 ## Commands
