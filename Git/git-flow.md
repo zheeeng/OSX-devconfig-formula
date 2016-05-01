@@ -128,3 +128,33 @@ In other situations, you need to link remote repository through commands:
 
         git remote prune origin
 
+### Make a release
+
+1. Create && switch to a `release` branch based on the latest commit on `develop` branch by default. You cloud also specify a SHA-1 hash for releasing as you need:
+
+        git flow release start <release version> [<base>]
+
+2. Push the release to remote repository:
+
+        git flow release publish <release version>
+
+    Other people cloud pull release:
+
+        git flow release track <release version>
+
+3. After adding && committing the Version information, Changelog, License, README file and so on, pushing && pulling commits, making sure your release is fully tested, finish this final release:
+
+        git flow release finish <release version>
+
+    It merges the `release` branch to the `master` and `develop` branches, tags `<release version>` on the merged commmit node of `master` and also removes the `release` branch.
+
+4. Push `develop` and `master` branches and your tags:
+
+        git push origin develop; git push origin master; git push --tags
+
+5. As a collaborator, pull down remote changes and don't forget to remove the tracked `release` branch that doesn't exist anymore at remote:
+
+        git fetch -p
+        git flow release delete <release version>
+
+
