@@ -22,18 +22,19 @@ The git-flow (AVH Edition) provides development model on repository operations e
 
 List of sub-commands on specific branch:
 
-Branch name | `[list]` | `start` | `finish` | `publish` | `track` | `diff` | `rebase` | `checkout` | `deelte`
-:---------: | :------: | :------:|:-------: | :-------: | :-----: | :----: | :------: | :--------: | :-----:
-master      |          |         |          |           |         |        |          |            |
-develop     |          |         |          |           |         |        |          |            |
-feature     | &check;  | &check; | &check;  | &check;   | &check; | &check;| &check;  | &check;    | &check;
-release     | &check;  | &check; | &check;  | &check;   | &check; |        |          |            | &check;
-bugfix      | &check;  | &check; | &check;  | &check;   | &check; | &check;| &check;  | &check;    | &check;
-hotfix      | &check;  | &check; | &check;  | &check;   |         |        |          |            | &check;
-support     | &check;  | &check; | &check;  |           |         |        |          |            |
+Branch name | `[list]` | `start` | `finish` | `publish` | `track` | `diff` | `rebase` | `delete`
+:---------: | :------: | :------:|:-------: | :-------: | :-----: | :----: | :------: | :-----:
+master      |          |         |          |           |         |        |          |
+develop     |          |         |          |           |         |        |          |
+feature     | &check;  | &check; | &check;  | &check;   | &check; | &check;| &check;  | &check;
+release     | &check;  | &check; | &check;  | &check;   | &check; |        |          | &check;
+bugfix      | &check;  | &check; | &check;  | &check;   | &check; | &check;| &check;  | &check;
+hotfix      | &check;  | &check; | &check;  | &check;   |         |        |          | &check;
+support     | &check;  | &check; | &check;  |           |         |        |          |
 
 Other sub-commands:
-* `git flow <branch> pull` is deprecated. Use `tack` instead.
+* `git flow <branch> pull <name>` is about to be deprecated. Use `git flow <branch> track <name>` instead.
+* `git flow <branch> checkout <name>` is about to be deprecated. Use raw git command `checkout` instead.
 * `git flow init` initializes on an empty directory or a git repository for git-flow supporting.
 * `git flow version` shows version information.
 * `git flow config` manages your git-flow configuration.
