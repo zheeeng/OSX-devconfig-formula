@@ -79,4 +79,49 @@ In other situations, you need to link remote repository through commands:
 
         git push -u origin master; git push -u origin develop
 
+### Develop a feature
+
+1. Create && switch to a `feature` branch based on the latest commit on `develop` branch by default:
+
+        git flow feature start <feature name>
+
+2. Develop your feature and commit your changes.
+
+    * If you cooperate with others, try pushing this feature and notify your partners:
+
+            git flow feature publish <feature name>
+
+        After a stage of development, push the recent commits:
+
+            git push origin feature/<feature name>
+
+    * Reversely, you may be notified to track a new added `feature` branch and assist the continuing development:
+
+            git flow feature track <feature name>
+
+        When you are going to receive the latest feature commits, checkout the `feature` branch, then pull down the commits:
+
+            git checkout feature/<feature name>
+            git pull --rebase origin feature/<feature name>
+
+3. Once you finished your feature development, run `finish` command. Git-flow will merge `feature` branch back to `develop` branch, delete the local and remote(if your branch is published) branches, and switch git `HEAD` into `develop` branch:
+
+        git flow feature finish <feature name>
+
+    Push the merged `develop` branch to remote and don't forget to remind your partners that you just closed a `feature` branch:
+
+        git push origin develop
+
+4. If you are one of the feature development collaborators, once you are notified that a feature development is finished, or you find a vanished remote `feature` branch after running `git fetch -p`, delete the local one manually:
+
+        git flow feature delete <feature name>
+
+    Prune the remote branch that doesn't exist anymore:
+
+        git remote prune origin
+
+    *or*
+
+        git fetch -p
+
 
