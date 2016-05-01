@@ -169,4 +169,34 @@ In other situations, you need to link remote repository through commands:
 
     It merges the `bugfix` branch back to `develop` branch and removes the `bugfix` branch.
 
+### Hotfix
+
+`hotfix` works like `bugfix` workflow. But there are still four main differences which are emphasized in **blod font**:
+
+1. Create && switch to a `hotfix` branch **based on the latest commit on `master` branch by default**.
+
+        git flow hotfix start <hotfix version>
+
+2. After hotfixing, **adding && commiting Version information, Changelog**, finish this branch:
+
+        git flow hotfix finish <hotfix version>
+
+    It merges the `hotfix` branch to **`master` branch and `develop` branch**, **tags `<hotfix version>` on the merged commit node of `master` branch** and removes the `hotfix` branch.
+
+### Support a versioned production
+
+1. Diverge a support branch from a release version:
+
+        git flow support start <support version> <release version>
+
+    Assume the release version is "v2.0", the support version number could be only the MAJOR number—`Production-v2`.
+
+2. Develop this support branch through over the entire workflow:
+
+        git flow <feature/release...> <start/publish...> <feature name> <support version>
+
+After a period of development completed, push it out:
+
+        git push origin <support version>
+
 
