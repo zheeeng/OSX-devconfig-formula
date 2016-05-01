@@ -104,6 +104,14 @@ In other situations, you need to link remote repository through commands:
             git checkout feature/<feature name>
             git pull --rebase origin feature/<feature name>
 
+    * Maybe for some reasons, a `feature` under development is about to be discarded and won't be continued anymore:
+
+            git flow feature delete -f <feature name>
+
+        If this branch is published, notify your partners to force delete their local `feature` branch as you did above. You'd also need to delete the shared remote branch:
+
+            git push origin :feature/<feature name>
+
 3. Once you finished your feature development, run `finish` command. Git-flow will merge `feature` branch back to `develop` branch, delete the local and remote(if your branch is published) branches, and switch git `HEAD` into `develop` branch:
 
         git flow feature finish <feature name>
@@ -119,9 +127,4 @@ In other situations, you need to link remote repository through commands:
     Prune the remote branch that doesn't exist anymore:
 
         git remote prune origin
-
-    *or*
-
-        git fetch -p
-
 
