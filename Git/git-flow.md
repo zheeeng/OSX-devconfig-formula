@@ -46,4 +46,37 @@ Other sub-commands:
 ![git flow model](http://nvie.com/img/git-model@2x.png)
 *The graphic workflow of git flow model*
 
+### Initialize git-flow
+
+Initialize for git-flow supporting:
+
+    git flow init [-d]
+
+Option '-d' means using default settings. Two long term branches, `master` and `develop`, are settled.
+
+### Link remote repository
+
+To fully make use of the distributed version control, the preparation work on the upstream repository and branches is imperative. If you perform the initialization in a repository containing remote branches—`remotes/origin/develop` or `remotes/origin/master`, git-flow will add upstream tracking on `master` or `develop` branches respectively.
+
+In other situations, you need to link remote repository through commands:
+
+1. Check branches and the relationship to their upstream branches.
+
+        git branch -avv
+
+    We expect `master` and `develop` keep track on upstream branches:
+
+        develop                         5bcfed9 [origin/develop] Release from a base branch gets errors on finishing.
+        master                          43548ed [origin/master] Merge branch 'release/1.9.1'
+
+    If the trackings is settled over, skip to next [part](#develop-a-feature), otherwise—
+
+2. Add remote repository:
+
+        git remote add origin git@gitserver:REPONAME.git
+
+3. Manually make the `master` branch and the `develop` branch keep track on remotes':
+
+        git push -u origin master; git push -u origin develop
+
 
