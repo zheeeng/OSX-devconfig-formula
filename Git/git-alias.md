@@ -153,4 +153,18 @@ gunwip      | `git log -n 1 | grep -q -c -- "--wip--" && git reset HEAD~1`
 gwip~       | gunwip
 gwipe       | `git add -A && git rm $(git ls-files --deleted) 2> /dev/null; git commit -qm "WIPE SAVEPOINT" && git reset HEAD~1 --hard`
 
+# Git-flow aliases
+
+## Through git-config
+
+```shell
+git config --global alias.master 'checkout master'
+git config --global alias.develop 'checkout develop'
+git config --global alias.feature 'flow feature'
+git config --global alias.release 'flow release'
+git config --global alias.bugfix 'flow bugfix'
+git config --global alias.hotfix 'flow hotfix'
+git config --global alias.support 'flow support'
+```
+
 
