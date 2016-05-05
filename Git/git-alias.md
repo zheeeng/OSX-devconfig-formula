@@ -102,8 +102,11 @@ gcp         | git cherry-pick
             |
 gd          | git diff
 gdca        | git diff --cached
+gdck        | git diff --check
+gdcc        | git diff --cached --check
 gdt         | git diff-tree --no-commit-id --name-only -r
 gdw         | git diff --word-diff
+gdwc        | git diff --cached --word-diff
             |
 gf          | git fetch
 gfa         | git fetch --all --tags --prune
@@ -124,6 +127,9 @@ gls         | git ls-files
 gls~        | git ls-files --others --exclude-standard
             |
 gm          | git merge
+            |
+gmb         | git merge-base
+ganc        | gmb
             |
 gp          | git push
 gpu         | git push -u
@@ -169,6 +175,8 @@ gst         | git -c pager.status=less status -vv
             |
 gshow       | git show
 gcat        | gshow
+            |
+gsl         | git shortlog
             |
 gsta        | git stash
 gstaa       | git stash apply
