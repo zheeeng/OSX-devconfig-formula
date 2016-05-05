@@ -104,7 +104,8 @@ glast       | git log -1 --log-size -p
 gls         | git ls-files
 gls~        | git ls-files --others --exclude-standard
 gm          | git merge
-gp          | git push --tags
+gp          | git push
+gpu         | git push -u
 gp!         | `_() {git push $1 && git push --tags $1}; _`
 gpd         | git push --tags --dry-run
 gpdr        | gpd
