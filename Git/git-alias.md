@@ -23,19 +23,19 @@ gac         | git add -A . && git commit
 gac!        | git add -A . && git commit --amend
 gacm        | git add -A . && git commit -m
 gacm!       | git add -A . && git commit --amend -m
-gacmsg      | gacm
-gacmsg!     | gacm!
+**gacmsg**  | *gacm*
+**gacmsg!** | *gacm!*
             |
 gb          | git branch
 gba         | git branch -avv
-gbranches   | gba
+**gbranches** | *gba*
 gbm         | git branch --merged
 gbnm        | git branch --no-merged
 gbus        | git branch --set-upstream-to
 gbus~       | git branch --unset-upstream
-gbunus      | gbus~
+**gbunus**  | *gbus~*
 gbdm        | `_() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs -n 1 git branch -d; }; _`
-gbdmerged   | gbdm
+**gbdmerged** | *gbdm*
             |
 gbl         | git blame -b -w
             |
@@ -44,7 +44,7 @@ gbsb        | git bisect bad
 gbsg        | git bisect good
 gbsr        | git bisect run
 gbsre       | git bisect reset
-gbsreset    | gbsre
+**gbsreset**| *gbsre*
 gbss        | git bisect start
             |
 gc          | git commit -v
@@ -55,10 +55,10 @@ gcm         | git commit -m
 gcm!        | git commit --amend -m
 gcam        | git commit -a -m
 gcam!       | git commit -a --amend -m
-gcmsg       | gcm
-gcmsg!      | gcm!
-gcamsg      | gcam
-gcamsg!     | gcam!
+**gcmsg**   | *gcm*
+**gcmsg!**  | *gcm!*
+**gcamsg**  | *gcam*
+**gcamsg!** | *gcam!*
             |
 gcf         | git config
 gcfa        | git config --add
@@ -91,7 +91,7 @@ gcfu!       | git config --global --unset
 gcfua!      | git config --global --unset-all
             |
 gcl         | git clone --recursive
-gclone      | gcl
+**gclone**  | *gcl*
             |
 gclean!     | git clean -df
             |
@@ -114,7 +114,7 @@ gfa         | git fetch --all --tags --prune
 gignore     | git update-index --assume-unchanged
 gignored    | git ls-files -v \| grep "^[[:lower:]]"
 gignore~    | git update-index --no-assume-unchanged
-gunignore   | gignore~
+**gunignore** | *gignore~*
             |
 glg         | git log --oneline --decorate --color
 glog        | git log --stat --decorate --color -p
@@ -129,13 +129,13 @@ gls~        | git ls-files --others --exclude-standard
 gm          | git merge
             |
 gmb         | git merge-base
-ganc        | gmb
+**ganc**    | *gmb*
             |
 gp          | git push
 gpu         | git push -u
 gp!         | `_() {git push $1 && git push --tags $1}; _`
 gpd         | git push --tags --dry-run
-gpdr        | gpd
+**gpdr**    | *gpd*
 gpt         | git push --tags
             |
 gpl         | git pull --tags
@@ -162,7 +162,7 @@ grsh        | git reset HEAD
 grsh!       | git reset --hard HEAD
             |
 grt         | `cd $(git rev-parse --show-toplevel || echo ".")`
-groot       | grt
+**groot**   | *grt*
             |
 grv         | git revert
 grva        | git revert --abort
@@ -174,7 +174,7 @@ gss         | git status --ignored
 gst         | git -c pager.status=less status -vv
             |
 gshow       | git show
-gcat        | gshow
+**gcat**    | *gshow*
             |
 gsl         | git shortlog
             |
@@ -192,7 +192,7 @@ gvt         | git verify-tag
             |
 gwip        | `git add -A && git rm $(git ls-files --deleted) 2> /dev/null; git commit -m "--wip--" && echo "WIP\!"`
 gunwip      | `git log -n 1 | grep -q -c -- "--wip--" && git reset HEAD~1`
-gwip~       | gunwip
+**gwip~**   | *gunwip*
             |
 gwipe       | `git add -A && git rm $(git ls-files --deleted) 2> /dev/null; git commit -qm "WIPE SAVEPOINT" && git reset HEAD~1 --hard`
 
