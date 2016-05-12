@@ -142,10 +142,17 @@ gmb         | git merge-base
             |
 gp          | git push
 gpu         | git push -u
-gp!         | `_() {git push $1 && git push --tags $1}; _`
+gpp         | `_() {git push $1 && git push --tags $1}; _`
 gpd         | git push --tags --dry-run
 **gpdr**    | *gpd*
 gpt         | git push --tags
+            |
+gp!         | git push --force
+gpu!        | git push --force -u
+gpp!        | `_() {git push --force $1 && git push --tags --force $1}; _`
+gpd!        | git push --tags --dry-run --force
+**gpdr!**   | *gpd!*
+gpt!        | git push --tags --force
             |
 gpl         | git pull --tags
 gplr        | git pull --tags --rebase
