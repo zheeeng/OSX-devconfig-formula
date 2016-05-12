@@ -28,6 +28,7 @@ gacm!       | git add -A . && git commit --amend -m
 **gacmsg!** | *gacm!*
             |
 gb          | git branch
+gb!         | git branch --force
 gba         | git branch -avv
 **gbranches** | *gba*
 gbm         | git branch --merged
