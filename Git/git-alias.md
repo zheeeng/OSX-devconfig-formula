@@ -18,6 +18,7 @@ galias      | get git aliases
 g           | git
             |
 ga          | git add
+gaf         | git add --force
 gaa         | git add --all
 gapa        | git add --patch
 gac         | git add -A . && git commit
@@ -28,7 +29,7 @@ gacm!       | git add -A . && git commit --amend -m
 **gacmsg!** | *gacm!*
             |
 gb          | git branch
-gb!         | git branch --force
+gbf         | git branch --force
 gba         | git branch -avv
 **gbranches** | *gba*
 gbm         | git branch --merged
