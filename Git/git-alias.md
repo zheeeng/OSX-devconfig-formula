@@ -184,6 +184,9 @@ grba        | git rebase --abort
 grbc        | git rebase --continue
 grbs        | git rebase --skip
             |
+grm         | git rm
+grm~        | git rm --cached
+            |
 grs         | git reset
 grsh        | git reset HEAD --
 **gunstage**| *grsh*
