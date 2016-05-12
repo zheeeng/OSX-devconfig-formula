@@ -100,7 +100,9 @@ gcl         | git clone --recursive
 gclean!     | git clean -df
             |
 gco         | git checkout
+gco-        | git checkout -
 gcob        | git checkout -b
+gcoo        | git checkout --orphan
             |
 gcp         | git cherry-pick
             |
