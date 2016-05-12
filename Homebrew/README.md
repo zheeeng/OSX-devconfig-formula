@@ -40,6 +40,9 @@ brew list [--versions]
 brew outdated
 # Remove older versions of formulae or everything at once (with option '-n' dry-run cleanup):
 brew cleanup [<FORMULAE>] [-n]
+# Symlink/unsymlink a specific formula's files into the Homebrew prefix:
+brew link <FORMULAE>
+brew unlink <FORMULAE>
 # Update the formulae and Homebrew itself:
 brew update
 # Upgrade
@@ -67,7 +70,7 @@ alias bubu='bubo && bubc'
 ## Advanced commands
 
 ```shell
-# Activate a previously installed version of a formula
+# Activate a previously installed version of a formula(I strongly recommend you use 'brew switch' to control the versions of your formulae if they don't have many global dependencies):
 brew info <FORMULA>
 brew switch <FORMULA> <VERSION>
 # Download the source packages for the given formulae:
