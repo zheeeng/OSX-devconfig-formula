@@ -165,9 +165,13 @@ grba        | git rebase --abort
 grbc        | git rebase --continue
 grbs        | git rebase --skip
             |
-grs         | git reset HEAD --
-grsh        | git reset HEAD
-grsh!       | git reset --hard HEAD
+grs         | git reset
+grsh        | git reset HEAD --
+**gunstage**| *grsh*
+            |
+grs!        | git reset --hard
+grsh!       | git reset --hard HEAD --
+**gunstage!**| *grsh!*
             |
 grt         | `cd $(git rev-parse --show-toplevel || echo ".")`
 **groot**   | *grt*
