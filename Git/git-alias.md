@@ -32,11 +32,12 @@ gb          | git branch
 gbf         | git branch --force
 gba         | git branch -avv
 **gbranches** | *gba*
+gbd         | git branch -d
 gbm         | git branch --merged
 gbnm        | git branch --no-merged
-gbus        | git branch --set-upstream-to
-gbus~       | git branch --unset-upstream
-**gbunus**  | *gbus~*
+gbu        | git branch --set-upstream-to
+gbu~       | git branch --unset-upstream
+            |
 gbdm        | `_() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs -n 1 git branch -d; }; _`
 **gbdmerged** | *gbdm*
             |
