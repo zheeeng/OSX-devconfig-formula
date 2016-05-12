@@ -138,6 +138,7 @@ glast       | git log -1 --log-size -p
             |
 glf         | git ls-files
 glf~        | git ls-files --others --directory
+glfi        | git ls-files --others --ignored --exclude-standard --directory
             |
 gll         | `_() { ls -dlhG $(git ls-tree --name-only ${1-HEAD}) }; _`
 gls         | `_() { ls -dG $(git ls-tree --name-only ${1-HEAD}) }; _`
