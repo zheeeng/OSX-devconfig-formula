@@ -132,8 +132,13 @@ glta        | `git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Cre
 gltw        | `git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit --all --reflog`
 glast       | git log -1 --log-size -p
             |
-gls         | git ls-files
-gls~        | git ls-files --others --exclude-standard
+glf         | git ls-files
+glf~        | git ls-files --others --directory
+            |
+gll         | `_() { ls -dlhG $(git ls-tree --name-only ${1-HEAD}) }; _`
+gls         | `_() { ls -dG $(git ls-tree --name-only ${1-HEAD}) }; _`
+gllr        | `_() { ls -lhG $(git ls-tree -r --name-only ${1-HEAD}) }; _`
+glsr        | `_() { ls -G $(git ls-tree -r --name-only ${1-HEAD}) }; _`
             |
 gm          | git merge
             |
