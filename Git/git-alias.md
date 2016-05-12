@@ -149,6 +149,7 @@ gmb         | git merge-base
             |
 gp          | git push
 gpu         | git push -u
+gpdb        | git push --delete
 gpp         | `_() {git push $1 && git push --tags $1}; _`
 gpd         | git push --tags --dry-run
 **gpdr**    | *gpd*
