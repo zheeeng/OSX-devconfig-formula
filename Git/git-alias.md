@@ -4,8 +4,9 @@
 
 ```shell
 git config --global alias.branches 'branch -avv'
-git config --global alias.unstage 'reset HEAD --'
+git config --global alias.review 'diff -U99999'
 git config --global alias.tree 'log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit'
+git config --global alias.unstage 'reset HEAD --'
 ```
 
 ## Through alias-cli
@@ -101,12 +102,19 @@ gcob        | git checkout -b
 gcp         | git cherry-pick
             |
 gd          | git diff
-gdca        | git diff --cached
+gda         | git diff -U99999
+**greview** | *gda*
 gdck        | git diff --check
-gdcc        | git diff --cached --check
-gdt         | git diff-tree --no-commit-id --name-only -r
 gdw         | git diff --word-diff
-gdwc        | git diff --cached --word-diff
+            |
+gd!         | git diff --cached
+gda!        | git diff -U99999
+greview!    | *gda!*
+gdck!       | git diff --cached --check
+gdw!        | git diff --cached --word-diff
+            |
+gdt         | git diff-tree --no-commit-id --name-only -r
+            |
             |
 gf          | git fetch
 gfa         | git fetch --all --tags --prune
