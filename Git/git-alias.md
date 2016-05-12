@@ -209,11 +209,15 @@ gshow       | git show
 gsl         | git shortlog
             |
 gsta        | git stash
+gstau       | git stash --include-untracked
 gstaa       | git stash apply
-gstad       | git stash drop
+gstac!      | git stash clear
+gstac       | echo "CAUTION: Use \"gstac!\" to clear all stored stashes."
+gstad!      | git stash drop
+gstad       | echo "CAUTION: Use \"gstad!\" to drop the stash."
 gstal       | git stash list
-gstap       | git stash list pop
-gstas       | git stash list show --text
+gstap       | git stash pop
+gstas       | git stash show --text
             |
 gt          | git tag
 gts         | git tag -s
