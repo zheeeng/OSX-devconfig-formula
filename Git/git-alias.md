@@ -186,9 +186,13 @@ grbs        | git rebase --skip
 grm         | git rm
 grm~        | git rm --cached
             |
-grs         | git reset
-grsh        | git reset HEAD --
+grs         | git reset --mixed
+grsh        | git reset --mixed HEAD --
 **gunstage**| *grsh*
+            |
+grs~        | git reset --soft
+grsh~       | git reset --soft HEAD --
+gunstage~   | grsh~
             |
 grs!        | git reset --hard
 grsh!       | git reset --hard HEAD --
