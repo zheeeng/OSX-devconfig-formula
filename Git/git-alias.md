@@ -33,8 +33,12 @@ gbf         | git branch --force
 gba         | git branch -avv
 **gbranches** | *gba*
 gbd         | git branch -d
-gbm         | git branch --merged
-gbnm        | git branch --no-merged
+gbd!        | git branch -D
+gbm         | git branch -m
+gbm!        | git branch -M
+gbmerged    | git branch --merged
+gbmerged~   | git branch --no-merged
+**gbnomerged** | *gbmerged~*
 gbu        | git branch --set-upstream-to
 gbu~       | git branch --unset-upstream
             |
