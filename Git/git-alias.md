@@ -175,7 +175,6 @@ grrn        | git remote rename
 grgu        | git remote get-url
 grsu        | git remote set-url
 grp         | git remote prune
-grs         | git remote show
 gru         | git remote update
             |
 grb         | git rebase
