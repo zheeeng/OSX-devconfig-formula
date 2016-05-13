@@ -98,6 +98,7 @@ gcl         | git clone --recursive
 **gclone**  | *gcl*
             |
 gclean!     | git clean -df
+gclean      | `echo "Running in dry-run mode. \n Note: Run \"gclean!\" to perform the UNRECOVERABLE clean operation."; git clean -dfn`
             |
 gco         | git checkout
 gco-        | git checkout -
@@ -114,7 +115,7 @@ gdw         | git diff --word-diff
             |
 gd!         | git diff --cached
 gda!        | git diff -U99999
-greview!    | *gda!*
+**greview!**| *gda!*
 gdck!       | git diff --cached --check
 gdw!        | git diff --cached --word-diff
             |
@@ -123,6 +124,10 @@ gdt         | git diff-tree --no-commit-id --name-only -r
             |
 gf          | git fetch
 gfa         | git fetch --all --tags --prune
+            |
+gi          | git init
+**ginit**   | *gi*
+gib         | git init --bare
             |
 gignore     | git update-index --assume-unchanged
 gignored    | git ls-files -v \| grep "^[[:lower:]]"
