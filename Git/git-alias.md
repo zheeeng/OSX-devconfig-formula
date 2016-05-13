@@ -139,11 +139,11 @@ gignore~    | git update-index --no-assume-unchanged
 **gunignore** | *gignore~*
             |
 glg         | git log --oneline --decorate --color
-glog        | git log --stat --decorate --color -p
+glog        | git log --stat --notes --show-signature --decorate --color -p
 glt         | `git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit`
 glta        | `git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit --all`
 gltw        | `git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit --all --reflog`
-glast       | git log -1 --log-size -p
+glast       | git log -1 --notes --show-signature --log-size -p
             |
 glf         | git ls-files
 glf~        | git ls-files --others --directory
