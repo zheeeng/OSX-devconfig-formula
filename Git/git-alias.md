@@ -28,6 +28,12 @@ gacm!       | git add -A . && git commit --amend -m
 **gacmsg**  | *gacm*
 **gacmsg!** | *gacm!*
             |
+gar         | git archive
+gargz       | Details in [link][git-aliases.sh].
+gartar      | Details in [link][git-aliases.sh].
+gartgz      | Details in [link][git-aliases.sh].
+garzip      | Details in [link][git-aliases.sh].
+            |
 gb          | git branch
 gb!         | git branch --force
 gba         | git branch -avv
@@ -264,4 +270,5 @@ git config --global alias.hotfix 'flow hotfix'
 git config --global alias.support 'flow support'
 ```
 
+[git-aliases.sh]: https://github.com/zheeeng/.dotfiles/blob/master/envconfig/git-aliases.sh
 
