@@ -20,7 +20,10 @@ g           | git
 ga          | git add
 ga!         | git add --force
 gaa         | git add --all
-gapa        | git add --patch
+gap         | git add --patch
+**gapa**    | *gap*
+gai         | git add --interactive
+gau         | git add --update
 gac         | git add -A . && git commit
 gac!        | git add -A . && git commit --amend
 gacm        | git add -A . && git commit -m
