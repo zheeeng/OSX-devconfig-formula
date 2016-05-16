@@ -121,6 +121,8 @@ gcoo        | git checkout --orphan
             |
 gcp         | git cherry-pick
             |
+gcount      | git count-objects --human-readable
+            |
 gd          | git diff
 gda         | git diff -U99999
 **greview** | *gda*
