@@ -169,6 +169,8 @@ glsr        | `_() { ls -G $(git ls-tree -r --name-only ${1-HEAD}) }; _`
             |
 gm          | git merge
             |
+gmv         | git mv
+            |
 gmb         | git merge-base
 **ganc**    | *gmb*
             |
