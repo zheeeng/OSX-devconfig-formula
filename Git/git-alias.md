@@ -126,6 +126,9 @@ gdw!        | git diff --cached --word-diff
             |
 gdt         | git diff-tree --no-commit-id --name-only -r
             |
+gde         | git describe
+**gdescribe**| *gdesc*
+gdet        | git describe --tags
             |
 gf          | git fetch
 gfa         | git fetch --all --tags --prune
