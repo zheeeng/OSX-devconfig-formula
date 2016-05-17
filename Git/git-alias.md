@@ -258,6 +258,7 @@ gshow       | git show
 gcat        | git cat-file -p
             |
 gsl         | git shortlog
+gslnm       | git shortlog --no-merges
             |
 gsm         | git submodule
 gsma        | git submodule add
