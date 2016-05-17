@@ -190,6 +190,7 @@ gllr        | `_() { ls -lhG $(git ls-tree -r --name-only ${1-HEAD}) }; _`
 glsr        | `_() { ls -G $(git ls-tree -r --name-only ${1-HEAD}) }; _`
             |
 gm          | git merge
+gm          | git merge --no-ff
             |
 gmv         | git mv
             |
