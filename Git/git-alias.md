@@ -255,7 +255,7 @@ gss         | git status --ignored
 gst         | git -c pager.status=less status -vv
             |
 gshow       | git show
-**gcat**    | *gshow*
+gcat        | git cat-file -p
             |
 gsl         | git shortlog
             |
