@@ -117,7 +117,25 @@ gclean      | `echo "Running in dry-run mode. \n Note: Run \"gclean!\" to perfor
 gco         | git checkout
 gco-        | git checkout -
 gcob        | git checkout -b
+gcoB        | git checkout -B
 gcoo        | git checkout --orphan
+            |
+gco~        | git checkout -m
+gco-~       | git checkout -m -
+gcob~       | git checkout -m -b
+gcoB~       | git checkout -m -B
+gcoo~       | git checkout -m --orphan
+            |
+gco!        | git checkout -f
+gco-!       | git checkout -f -
+gcob!       | git checkout -f -b
+gcoB!       | git checkout -f -B
+gcoo!       | git checkout -f --orphan
+gco~!       | git checkout -f -m
+gco-~!      | git checkout -f -m -
+gcob~!      | git checkout -f -m -b
+gcoB~!      | git checkout -f -m -B
+gcoo~!      | git checkout -f -m --orphan
             |
 gcp         | git cherry-pick
             |
