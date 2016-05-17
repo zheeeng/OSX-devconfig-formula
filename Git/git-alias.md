@@ -191,6 +191,8 @@ glsr        | `_() { ls -G $(git ls-tree -r --name-only ${1-HEAD}) }; _`
             |
 gm          | git merge
 gm          | git merge --no-ff
+gmsq        | git merge --squash
+**gmsquash**| gmsq
             |
 gmv         | git mv
             |
