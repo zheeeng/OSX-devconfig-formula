@@ -155,6 +155,8 @@ gdw!        | git diff --cached --word-diff
             |
 gdt         | git diff-tree --no-commit-id --name-only -r
             |
+gdvim       | git difftool --tool=vimdiff -U99999
+            |
 gde         | git describe
 **gdescribe**| *gdesc*
 gdet        | git describe --tags
