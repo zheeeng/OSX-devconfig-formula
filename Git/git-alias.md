@@ -259,6 +259,23 @@ gshow       | git show
             |
 gsl         | git shortlog
             |
+gsm         | git submodule
+gsma        | git submodule add
+gsmf        | git submodule foreach
+gsmfr       | git submodule foreach --recursive
+gsmi        | git submodule init
+gsmi~       | git submodule deinit
+gsmi~!      | git submodule deinit --force
+**gsmdi**   | *gsmi~*
+**gsmdi!**  | *gsmi~!*
+gsms        | git submodule status --recursive
+gsmsum      | git submodule summary
+**gsmsummary**| *gsmsum*
+gsmsync     | git submodule sync --recursive
+gsmu        | git submodule update --init --recursive
+gsmpla      | `_() { git submodule foreach --recursive git pull ${1-origin} ${2-master} }; _`
+gsmpla!     | `_() { git submodule foreach --recursive git pull --force ${1-origin} ${2-master} }; _`
+            |
 gsta        | git stash
 gstau       | git stash --include-untracked
 gstaa       | git stash apply
