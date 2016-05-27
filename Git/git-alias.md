@@ -66,7 +66,8 @@ gbss        | git bisect start
             |
 gc          | git commit -v
 gc!         | git commit -v --amend
-gc!!        | git commit --amend --no-edit
+gcgc        | git commit --amend --no-edit
+**gcgc!**   | *gcgc*
 gca         | git commit -v -a
 gca!        | git commit -v -a --amend
 gcm         | git commit -m
