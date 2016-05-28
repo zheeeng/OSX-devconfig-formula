@@ -301,6 +301,8 @@ gstas       | git stash show --text
             |
 gt          | git tag
 gta         | git tag -a
+gtp         | gpt
+gtp!        | gpt!
 gts         | git tag -s
 gtv         | git tag -v
 gvt         | git verify-tag
