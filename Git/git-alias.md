@@ -81,17 +81,21 @@ gcam!       | git commit -a --amend -m
             |
 gcf         | git config
 gcfa        | git config --add
-gcfg        | git config --get
+gcfe        | git config --edit
+gcfg        | git config --get-regexp
 gcfl        | git config --list
 gcff        | `cat ``git rev-parse --git-dir``/config`
 gcfrm       | git config --remove-section
 gcfrn       | git config --rename-section
+gcfso       | git config --show-origin
+gcfsoa      | `gcfl | cut -d= -f1 | while read line; do git config --show-origin $line; done`
 gcfu        | git config --unset
 gcfua       | git config --unset-all
             |
 gcf~        | git config --local
 gcfa~       | git config --local --add
-gcfg~       | git config --local --get
+gcfe~       | git config --local --edit
+gcfg~       | git config --local --get-regexp
 gcfl~       | git config --local --list
 gcff~       | `cat ``git rev-parse --git-dir``/config`
 gcfrm~      | git config --local --remove-section
@@ -101,7 +105,8 @@ gcfua~      | git config --local --unset-all
             |
 gcf!        | git config --global
 gcfa!       | git config --global --add
-gcfg!       | git config --global --get
+gcfe!       | git config --global --edit
+gcfg!       | git config --global --get-regexp
 gcfl!       | git config --global --list
 gcff!       | `if [ -f "$HOME/.gitconfig" ]; then cat "$HOME/.gitconfig"; elif [ -f "$XDG_CONFIG_HOME/git/config" ]; then cat "$XDG_CONFIG_HOME/git/config"; fi`
 gcfrm!      | git config --global --remove-section
