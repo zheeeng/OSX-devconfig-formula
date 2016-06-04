@@ -9,13 +9,15 @@ It’s implemented as a homebrew external command called `cask`. (`brew cask sea
 	brew tap caskroom/cask
 	brew install brew-cask
 
-Homebrew Cask install formulae into `/opt/homebrew-cask/Caskroom/`. The downloads are stored in `/Library/Caches/Homebrew/Casks`.
+Homebrew Cask install formulae into `/opt/homebrew-cask/Caskroom/`. The downloads are stored in `~/Library/Caches/Homebrew/Casks`.
 
 ## Tab-completion
 
-Check [Zsh/plugins](../iTerm2/zsh-plugins.html) section:
+Add `brew-cask` plugin into `~/.zshrc`.
 
-Plugin `brew-cask` for Zsh enables the tab-completion feature.
+Check [Zsh plugins: brew-cask](../iTerm2/zsh-plugins.html#brew-cask) section:
+
+> Plugin `brew-cask` for Zsh enables the tab-completion feature.
 
 ## Versioned casks
 
