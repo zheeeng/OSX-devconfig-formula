@@ -24,6 +24,7 @@ gap         | git add --patch
 **gapa**    | *gap*
 gai         | git add --interactive
 gau         | git add --update
+gau         | git add --update -p
 gac         | git add -A . && git commit
 gac!        | git add -A . && git commit --amend
 gacm        | git add -A . && git commit -m
