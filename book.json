@@ -3,7 +3,7 @@
     "description": "MacOS Config Manual",
     "extension": null,
     "generator": "site",
-    "isbn": null,
+    "isbn": "",
     "links": {
         "sidebar": {
             "About me": "https://github.com/zheeeng"
