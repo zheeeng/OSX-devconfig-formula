@@ -4,8 +4,8 @@ Homebrew is the most popular package manager for OS X.
 
 ## Related directories
 
-1. Homebrew downloads formulae into `/Library/Caches/Homebrew`.
-2. Then it installs formulae into `/usr/local/Cellar/`,
+1. Homebrew downloads formulae into `~/Library/Caches/Homebrew` (by run `brew --cache` in terminal).
+2. Then it installs formulae into `/usr/local/Cellar/`.
 3. and symlinks they into `/usr/local/bin`.
 
 ## Installation
@@ -56,9 +56,11 @@ _More details: <https://github.com/Homebrew/homebrew/blob/master/share/doc/homeb
 
 ## Tab-completion
 
-Check [Zsh/plugins](../iTerm2/zsh-plugins.html) section:
+Add `brew` plugin into `~/.zshrc`.
 
-Plugin `brew` for Zsh enables the tab-completion feature. Moreover, some command aliases for brew are added:
+Check [Zsh plugins: brew](../iTerm2/zsh-plugins.html#brew) section:
+
+> Plugin `brew` for Zsh enables the tab-completion feature. Moreover, some command aliases for brew are added:
 
 ```
 alias brews='brew list -1'
