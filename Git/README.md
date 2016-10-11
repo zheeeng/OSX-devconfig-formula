@@ -33,6 +33,24 @@ git config --global core.quotepath false
 * Leanrn git branching: <http://pcottle.github.io/learnGitBranching>
 * Git cheat sheet: <http://itmyhome.com/git-sheet>
 
+### Learning in CLI
+
+1. `git help -a` lists all available subcommands;
+2. `git help -g` lists some concept guides:
+
+   | Guide     | Description
+   | :-------- | :----------
+   | attributes| Defining attributes per path
+   | everyday  | Everyday Git With 20 Commands Or So
+   | glossary  | A Git glossary
+   | ignore    | Specifies intentionally untracked files to ignore
+   | modules   | Defining submodule properties
+   | revisions | Specifying revisions and ranges for Git
+   | tutorial  | A tutorial introduction to Git (for version 1.5.1 or newer)
+   | workflows | An overview of recommended workflows with Git
+
+See `git help <command>` or `git help <concept>` to read about a specific subcommand or concept.
+
 ## Untracking files
 
 To tell git which files to be ignored to being tracked, make use of `.gitignore` files. Git ignores files according to the file `.gitignore` which locates in your repository and global excludes attribute. If this file is related with project tightly, add it to your commit for sharing the settings with others. 
