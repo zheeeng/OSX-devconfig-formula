@@ -1,6 +1,6 @@
 {
-    "author": "Zheeeng<air.island.e@gmail.com>",
-    "description": "自用OS X 开发配置定式，亦供参考",
+    "author": "Zheeeng<hi@zheeeng.me>",
+    "description": "MacOS Config Manual",
     "extension": null,
     "generator": "site",
     "isbn": null,
@@ -9,6 +9,5 @@
             "About me": "https://github.com/zheeeng"
         }
     },
-
-    "title": "OS X 开发配置定式"
+    "title": "MacOS Config Manual"
 }
