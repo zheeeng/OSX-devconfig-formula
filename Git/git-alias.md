@@ -50,7 +50,7 @@ gbmerged~   | git branch --no-merged
 gbu         | git branch --set-upstream-to
 gbu~        | git branch --unset-upstream
 ----------  | ----------
-gbdm        | `_() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs -n 1 git branch -d; }; _`
+gbdm        | <code>_() { git branch --merged ${1-master} \| grep -v " ${1-master}$" | xargs -n 1 git branch -d; }; _</code>
 **gbdmerged** | *gbdm*
 ----------  | ----------
 gbl         | git blame -b -w
@@ -83,7 +83,7 @@ gcff        | `cat ``git rev-parse --git-dir``/config`
 gcfrm       | git config --remove-section
 gcfrn       | git config --rename-section
 gcfso       | git config --show-origin
-gcfsoa      | `gcfl | cut -d= -f1 | while read line; do git config --show-origin $line; done`
+gcfsoa      | <code>gcfl \| cut -d= -f1 \| while read line; do git config --show-origin $line; done</code>
 gcfu        | git config --unset
 gcfua       | git config --unset-all
 ----------  | ----------
@@ -173,7 +173,7 @@ gi          | git init
 gib         | git init --bare
 ----------  | ----------
 gignore     | git update-index --assume-unchanged
-gignored    | git ls-files -v \| grep "^[[:lower:]]"
+gignored    | <code>git ls-files -v \| grep "^[[:lower:]]"</code>
 gignore~    | git update-index --no-assume-unchanged
 **gunignore** | *gignore~*
 ----------  | ----------
@@ -252,7 +252,7 @@ grs!        | git reset --hard
 grsh!       | git reset --hard HEAD --
 **gunstage!**| *grsh!*
 ----------  | ----------
-grt         | `cd $(git rev-parse --show-toplevel || echo ".")`
+grt         | <code>cd $(git rev-parse --show-toplevel \|\| echo ".")</code>
 **groot**   | *grt*
 ----------  | ----------
 grv         | git revert
@@ -307,7 +307,7 @@ gtv         | git tag -v
 gvt         | git verify-tag
 ----------  | ----------
 gwip        | `git add -A && git rm $(git ls-files --deleted) 2> /dev/null; git commit -m "--wip--" && echo "WIP\!"`
-gunwip      | `git log -n 1 | grep -q -c -- "--wip--" && git reset HEAD~1`
+gunwip      | <code>git log -n 1 \| grep -q -c -- "--wip--" && git reset HEAD~1</code>
 **gwip~**   | *gunwip*
 ----------  | ----------
 gwipe       | `git add -A && git rm $(git ls-files --deleted) 2> /dev/null; git commit -qm "WIPE SAVEPOINT" && git reset HEAD~1 --hard`
