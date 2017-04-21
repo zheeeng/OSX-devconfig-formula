@@ -41,14 +41,12 @@ garzip      | Details in [link][git-aliases.sh].
 gb          | git branch
 gb!         | git branch --force
 gba         | git branch -avv
-**gbranches** | *gba*
 gbd         | git branch -d
 gbd!        | git branch -D
 gbm         | git branch -m
 gbm!        | git branch -M
 gbmerged    | git branch --merged
 gbmerged~   | git branch --no-merged
-**gbnomerged** | *gbmerged~*
 gbu        | git branch --set-upstream-to
 gbu~       | git branch --unset-upstream
             |
@@ -75,10 +73,6 @@ gcm         | git commit -m
 gcm!        | git commit --amend -m
 gcam        | git commit -a -m
 gcam!       | git commit -a --amend -m
-**gcmsg**   | *gcm*
-**gcmsg!**  | *gcm!*
-**gcamsg**  | *gcam*
-**gcamsg!** | *gcam!*
             |
 gcf         | git config
 gcfa        | git config --add
@@ -145,6 +139,9 @@ gcoB~!      | git checkout -f -m -B
 gcoo~!      | git checkout -f -m --orphan
             |
 gcp         | git cherry-pick
+gcpa        | git cherry-pick --abort
+gcpc        | git cherry-pick --continue
+gcpq        | git cherry-pick --quit
             |
 gcount      | git count-objects --human-readable
             |
@@ -165,14 +162,14 @@ gdt         | git diff-tree --no-commit-id --name-only -r
 gdvim       | git difftool --tool=vimdiff -U99999
             |
 gde         | git describe
-**gdescribe**| *gdesc*
+**gdesc**   | *gde*
+**gdescribe**| *gde*
 gdet        | git describe --tags
             |
 gf          | git fetch
 gfa         | git fetch --all --tags --prune
             |
 gi          | git init
-**ginit**   | *gi*
 gib         | git init --bare
             |
 gignore     | git update-index --assume-unchanged
@@ -238,6 +235,7 @@ grbi        | git rebase -i
 grba        | git rebase --abort
 grbc        | git rebase --continue
 grbs        | git rebase --skip
+grbon        | git rebase --onto
             |
 grm         | git rm
 grm~        | git rm --cached
