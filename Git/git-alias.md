@@ -289,7 +289,7 @@ gsmu        | git submodule update --init --recursive
 gsmpla      | `_() { git submodule foreach --recursive git pull ${1-origin} ${2-master} }; _`
 gsmpla!     | `_() { git submodule foreach --recursive git pull --force ${1-origin} ${2-master} }; _`
 ----------  | ----------
-gsta        | git stash
+gsta        | git stash -p
 gstau       | git stash --include-untracked
 gstaa       | git stash apply
 gstac!      | git stash clear
