@@ -257,6 +257,7 @@ grt         | <code>cd $(git rev-parse --show-toplevel \|\| echo ".")</code>
 **groot**   | *grt*
 ----------  | ----------
 grv         | git revert
+grvn         | git revert -n
 grva        | git revert --abort
 grvc        | git revert --continue
 grvq        | git revert --quit
