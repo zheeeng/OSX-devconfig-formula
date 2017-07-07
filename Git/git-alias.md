@@ -194,6 +194,7 @@ gllr        | `_() { ls -lhG $(git ls-tree -r --name-only ${1-HEAD}) }; _`
 glsr        | `_() { ls -G $(git ls-tree -r --name-only ${1-HEAD}) }; _`
 ----------  | ----------
 gm          | git merge
+gma         | git merge --abort
 gm          | git merge --no-ff
 gmsq        | git merge --squash
 **gmsquash**| gmsq
