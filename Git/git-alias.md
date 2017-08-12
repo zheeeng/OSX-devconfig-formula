@@ -177,11 +177,11 @@ gignored    | <code>git ls-files -v \| grep "^[[:lower:]]"</code>
 gignore~    | git update-index --no-assume-unchanged
 **gunignore** | *gignore~*
 ----------  | ----------
-glg         | git log --oneline --decorate --color
+glg         | `git log --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit`
 glog        | git log --stat --notes --show-signature --decorate --color -p
-glt         | `git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit`
-glta        | `git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit --all`
-gltw        | `git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit --all --reflog`
+glt         | *glg --graph*
+glta        | *glg --graph --all*
+gltw        | *glg --graph --all --reflog*
 glast       | git log -1 --notes --show-signature --log-size -p
 ----------  | ----------
 glf         | git ls-files
@@ -330,4 +330,3 @@ git config --global alias.support 'flow support'
 ```
 
 [git-aliases.sh]: https://github.com/zheeeng/.dotfiles/blob/master/envconfig/git-aliases.sh
-
