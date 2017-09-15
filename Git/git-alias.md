@@ -222,6 +222,9 @@ gpt!        | git push --tags --force
 gpl         | git pull --tags
 gplr        | git pull --tags --rebase
 ----------  | ----------
+gpl!         | git pull --tags
+gplr!        | git pull --tags --rebase
+----------  | ----------
 gr          | git remote -v
 gra         | git remote add
 grrm        | git remote remove
