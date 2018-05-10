@@ -147,6 +147,7 @@ gcount      | git count-objects --human-readable
 ----------  | ----------
 gd          | git diff
 gda         | git diff -U99999
+gdn         | git diff --name-status
 **greview** | *gda*
 gdck        | git diff --check
 gdw         | git diff --word-diff
